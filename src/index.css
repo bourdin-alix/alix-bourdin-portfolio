@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-bg text-dark font-body overflow-x-hidden; }
+  h1, h2, h3, h4 { @apply font-head; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-head font-semibold rounded-lg transition-all duration-200 hover:bg-accent-dark hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(124,58,237,0.3)];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-6 py-3 border-2 border-gray-200 text-dark font-head font-semibold rounded-lg transition-all duration-200 hover:border-accent hover:text-accent;
+  }
+  .chip {
+    @apply inline-flex items-center px-3 py-1 bg-accent-light text-accent-dark rounded-full text-xs font-head font-semibold;
+  }
+  .tag {
+    @apply inline-block px-2 py-0.5 bg-accent-light text-accent-dark rounded text-xs font-head font-semibold;
+  }
+  .section-label {
+    @apply text-xs font-head font-semibold tracking-widest uppercase text-accent mb-3 block;
+  }
+  .reveal {
+    @apply opacity-0 translate-y-7 transition-all duration-700 ease-out;
+  }
+  .reveal.visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Skill bar animation */
+.skill-fill {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.skill-fill.animated {
+  transform: scaleX(1);
+}
+
+/* Pulse dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.pulse-dot { animation: pulse-dot 2s infinite; }
+
+/* Scroll bounce */
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+.bounce-arrow { animation: bounce-arrow 2s infinite; }
+
+/* Confetti spin */
+@keyframes confetti-spin {
+  from { transform: rotate(-20deg) scale(0.5); }
+  to { transform: rotate(0) scale(1); }
+}
+.confetti-spin { animation: confetti-spin 0.6s ease forwards; }
+
+/* Coffee cup fill */
+@keyframes cup-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1.15); }
+}
+.cup-filled { animation: cup-pop 0.3s ease forwards; }
+
+/* Easter egg — café crack animations */
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-4px) rotate(-1deg); }
+  40%  { transform: translateX(5px) rotate(1.5deg); }
+  60%  { transform: translateX(-4px) rotate(-1deg); }
+  80%  { transform: translateX(3px) rotate(0.5deg); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(0.5) rotate(-5deg); }
+  60%  { transform: scale(1.1) rotate(2deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
