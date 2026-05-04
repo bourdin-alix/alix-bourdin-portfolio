@@ -47,6 +47,13 @@
 
 ## 🟡 Nice to have
 
+### 9. Layout desktop — éléments trop compacts
+
+- [ ] Augmenter padding/margin des sections principales sur grand écran (1280px+)
+- [ ] Sections Hero, About, Experience, Projects : plus d'espace vertical entre les blocs
+- [ ] Utiliser mieux la largeur disponible (colonnes plus larges, max-width plus généreux)
+- [ ] Objectif : respirer, pas compresser — le style éditorial doit se déployer sur desktop
+
 ### 8. Refactor useScrollReveal — supprimer querySelectorAll
 
 - [ ] Remplacer `querySelectorAll(".reveal")` par des `useRef` par composant

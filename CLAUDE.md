@@ -43,6 +43,10 @@ Hosted on Netlify — production site is live. Any change merged to `main` deplo
 - Stack: React 18 + Vite 6 + Tailwind CSS 3 + TypeScript. All components in `.tsx`, data files in `src/data/*.ts`.
 - No new dependencies without a clear reason.
 
+## Roadmap
+
+Always read `roadmap.md` before starting any task — it's the source of truth for what needs to be done.
+
 ## Git Workflow
 
 - **Never push directly to `main`** — Netlify deploys automatically on every merge, so `main` = production.
