@@ -1,89 +1,181 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-const WORDS = ['Je ', 'bois ', 'deux ', 'cafés ', 'par ', 'jour']
-const HIDDEN = 'Je déteste le café !!!'
+const WORDS = [
+  "I ",
+  "drink ",
+  "at ",
+  "least ",
+  "two ",
+  "coffees ",
+  "in ",
+  "the ",
+  "morning ",
+  "to ",
+  "wake ",
+  "up.",
+];
+const HIDDEN = "I actually hate coffee !!!";
 
-// Crack SVG overlays — one per click
 const CRACKS = [
-  <svg key={1} className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 300 40"><path d="M80 5 L95 20 L85 35" stroke="#7c3aed" strokeWidth="1.5" fill="none" opacity="0.6"/></svg>,
-  <svg key={2} className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 300 40"><path d="M80 5 L95 20 L85 35" stroke="#7c3aed" strokeWidth="1.5" fill="none" opacity="0.7"/><path d="M150 2 L140 18 L155 22 L145 38" stroke="#7c3aed" strokeWidth="1.5" fill="none" opacity="0.5"/></svg>,
-  <svg key={3} className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 300 40"><path d="M80 5 L95 20 L85 35" stroke="#7c3aed" strokeWidth="2" fill="none"/><path d="M150 2 L140 18 L155 22 L145 38" stroke="#7c3aed" strokeWidth="1.5" fill="none"/><path d="M200 8 L210 20 L195 28 L205 38" stroke="#7c3aed" strokeWidth="1.5" fill="none" opacity="0.7"/></svg>,
-  <svg key={4} className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 300 40"><path d="M80 5 L95 20 L85 35" stroke="#7c3aed" strokeWidth="2.5" fill="none"/><path d="M150 2 L140 18 L155 22 L145 38" stroke="#7c3aed" strokeWidth="2" fill="none"/><path d="M200 8 L210 20 L195 28 L205 38" stroke="#7c3aed" strokeWidth="2" fill="none"/><path d="M30 10 L50 20 L35 30" stroke="#7c3aed" strokeWidth="1.5" fill="none"/><path d="M250 5 L260 22 L248 35" stroke="#7c3aed" strokeWidth="1.5" fill="none"/></svg>,
-]
+  <svg
+    key={1}
+    className="absolute inset-0 w-full h-full pointer-events-none"
+    viewBox="0 0 300 40"
+    style={{ filter: "drop-shadow(0 0 3px #7c3aed)" }}
+  >
+    <path
+      className="crack-line"
+      d="M145 0 L158 12 L150 22 L162 40"
+      stroke="#7c3aed"
+      strokeWidth="2.5"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      className="crack-line"
+      d="M150 22 L138 34"
+      stroke="#7c3aed"
+      strokeWidth="1.5"
+      fill="none"
+      strokeLinecap="round"
+      style={{ animationDelay: "0.12s" }}
+    />
+  </svg>,
+  <svg
+    key={2}
+    className="absolute inset-0 w-full h-full pointer-events-none"
+    viewBox="0 0 300 40"
+    style={{ filter: "drop-shadow(0 0 5px #7c3aed)" }}
+  >
+    <path
+      className="crack-line"
+      d="M145 0 L158 12 L150 22 L162 40"
+      stroke="#7c3aed"
+      strokeWidth="3"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      className="crack-line"
+      d="M150 22 L138 34"
+      stroke="#7c3aed"
+      strokeWidth="2"
+      fill="none"
+      strokeLinecap="round"
+      style={{ animationDelay: "0.08s" }}
+    />
+    <path
+      className="crack-line"
+      d="M55 5 L44 18 L58 30 L48 40"
+      stroke="#7c3aed"
+      strokeWidth="2"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      style={{ animationDelay: "0.06s" }}
+    />
+    <path
+      className="crack-line"
+      d="M235 3 L248 16 L236 27 L245 40"
+      stroke="#7c3aed"
+      strokeWidth="2"
+      fill="none"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      style={{ animationDelay: "0.1s" }}
+    />
+    <path
+      className="crack-line"
+      d="M158 12 L172 20 L168 36"
+      stroke="#7c3aed"
+      strokeWidth="1.5"
+      fill="none"
+      strokeLinecap="round"
+      opacity="0.7"
+      style={{ animationDelay: "0.15s" }}
+    />
+  </svg>,
+];
 
-const shakeAnim = [
-  '',
-  'animate-[wiggle1_0.3s_ease]',
-  'animate-[wiggle2_0.3s_ease]',
-  'animate-[wiggle3_0.3s_ease]',
-  'animate-[wiggle4_0.4s_ease]',
-]
+const SCATTER = [
+  { x: -30, y: -40, rot: -25 },
+  { x: -8, y: 38, rot: 20 },
+  { x: 18, y: -32, rot: -18 },
+  { x: 28, y: 32, rot: 22 },
+  { x: -26, y: 22, rot: -20 },
+  { x: 12, y: -38, rot: 15 },
+  { x: 32, y: 18, rot: -22 },
+  { x: -22, y: -28, rot: 25 },
+  { x: 22, y: 42, rot: -15 },
+  { x: -16, y: 32, rot: 18 },
+  { x: 26, y: -22, rot: -25 },
+  { x: -28, y: -38, rot: 20 },
+];
 
 export function CafeEasterEgg() {
-  const [clicks, setClicks] = useState(0)
-  const [shattered, setShattered] = useState(false)
-  const [revealed, setRevealed] = useState(false)
-  const [shaking, setShaking] = useState(false)
+  const [clicks, setClicks] = useState(0);
+  const [shattered, setShattered] = useState(false);
+  const [revealed, setRevealed] = useState(false);
+  const [shaking, setShaking] = useState(false);
 
   function handleClick() {
-    if (revealed) return
-    const next = clicks + 1
-    setClicks(next)
-    setShaking(true)
-    setTimeout(() => setShaking(false), 350)
+    if (revealed) return;
+    const next = clicks + 1;
+    setClicks(next);
+    setShaking(true);
+    setTimeout(() => setShaking(false), 350);
 
-    if (next >= 5) {
-      setShattered(true)
-      setTimeout(() => setRevealed(true), 600)
+    if (next >= 3) {
+      setShattered(true);
+      setTimeout(() => setRevealed(true), 600);
     }
   }
 
   if (revealed) {
     return (
       <span className="inline-flex items-center gap-2 font-semibold text-accent animate-[popIn_0.5s_cubic-bezier(0.34,1.56,0.64,1)_forwards]">
-        Je déteste le café !!! ☕🚫
+        {HIDDEN} ☕🚫
       </span>
-    )
+    );
   }
 
   return (
     <span className="relative inline-block">
-      {/* Crack overlays */}
-      {clicks > 0 && CRACKS[Math.min(clicks - 1, 3)]}
+      {clicks > 0 && CRACKS[Math.min(clicks - 1, 1)]}
 
-      {/* The phrase — shatters on 5th click */}
       <span
-        className={`inline-flex gap-0 transition-all duration-500 ${
-          shattered ? 'opacity-0 scale-110 blur-sm' : ''
-        } ${shaking ? 'animate-[shake_0.3s_ease]' : ''}`}
-        style={{ display: 'inline-flex', flexWrap: 'wrap' }}
+        onClick={handleClick}
+        className={`inline-flex flex-wrap gap-0 transition-all duration-500 cursor-pointer select-none ${
+          shattered ? "opacity-0 scale-110 blur-sm" : ""
+        } ${
+          shaking
+            ? clicks >= 2
+              ? "animate-[shake-hard_0.45s_ease]"
+              : "animate-[shake_0.3s_ease]"
+            : ""
+        }`}
       >
-        {WORDS.map((word, i) => {
-          const isCafe = word.trim() === 'cafés'
-          return (
-            <span
-              key={i}
-              onClick={isCafe ? handleClick : undefined}
-              className={`transition-all duration-300 ${
-                shattered
-                  ? i % 2 === 0
-                    ? 'translate-y-[-20px] opacity-0 rotate-[-15deg]'
-                    : 'translate-y-[20px] opacity-0 rotate-[15deg]'
-                  : ''
-              } ${
-                isCafe
-                  ? 'text-accent underline decoration-dashed decoration-accent/50 cursor-pointer hover:decoration-solid hover:text-accent-dark select-none'
-                  : ''
-              }`}
-              title={isCafe ? `${5 - clicks} click${5 - clicks !== 1 ? 's' : ''} restant${5 - clicks !== 1 ? 's' : ''}...` : undefined}
-            >
-              {word}
-            </span>
-          )
-        })}
+        {WORDS.map((word, i) => (
+          <span
+            key={i}
+            className="whitespace-pre transition-all duration-500"
+            style={
+              shattered
+                ? {
+                    transform: `translate(${SCATTER[i].x}px, ${SCATTER[i].y}px) rotate(${SCATTER[i].rot}deg) scale(0.4)`,
+                    opacity: 0,
+                  }
+                : {}
+            }
+          >
+            {word}
+          </span>
+        ))}
       </span>
     </span>
-  )
+  );
 }
 
 export default function About() {
@@ -96,15 +188,18 @@ export default function About() {
           {/* Left */}
           <div className="reveal">
             <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-5">
-              "Building fast,<br />
+              "Building fast,
+              <br />
               <span className="text-accent">shipping faster.</span>"
             </h2>
             <p className="text-gray-500 leading-relaxed mb-4">
-              I'm a fullstack developer with a Master 2 from Epitech. I spent 3 years at fast-moving French
-              startups — where I learned to build end-to-end, own features, and ship things that matter.
+              I'm a fullstack developer with a Master 2 from Epitech. I spent 3
+              years at fast-moving French startups — where I learned to build
+              end-to-end, own features, and ship things that matter.
             </p>
             <p className="text-gray-500 leading-relaxed mb-4">
-              Now freelancing, I bring that startup mindset — speed, ownership, pragmatism — to every project I take on.
+              Now freelancing, I bring that startup mindset — speed, ownership,
+              pragmatism — to every project I take on.
             </p>
             {/* Easter egg sentence */}
             <p className="text-gray-500 leading-relaxed">
@@ -116,24 +211,30 @@ export default function About() {
           <div className="reveal">
             <div className="grid grid-cols-3 gap-4 mb-6">
               {[
-                { num: '3', label: 'Years exp' },
-                { num: '3', label: 'Startups' },
-                { num: '5+', label: 'Projects' },
+                { num: "3", label: "Years exp" },
+                { num: "3", label: "Startups" },
+                { num: "5+", label: "Projects" },
               ].map(({ num, label }) => (
-                <div key={label} className="border border-gray-200 rounded-xl p-4 text-center">
-                  <div className="text-3xl font-extrabold font-head text-accent">{num}</div>
+                <div
+                  key={label}
+                  className="border border-gray-200 rounded-xl p-4 text-center"
+                >
+                  <div className="text-3xl font-extrabold font-head text-accent">
+                    {num}
+                  </div>
                   <div className="text-xs text-gray-400 mt-1">{label}</div>
                 </div>
               ))}
             </div>
             <div className="bg-accent-light border-l-4 border-accent rounded-lg p-4">
               <p className="text-sm text-accent-dark italic">
-                "Give me a clear problem and I'll have a working solution before the standup ends."
+                "Give me a clear problem and I'll have a working solution before
+                the standup ends."
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
