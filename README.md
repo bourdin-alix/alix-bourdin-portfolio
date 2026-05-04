@@ -2,7 +2,7 @@
 
 Portfolio personnel en React + Vite + Tailwind CSS.
 
-## 🚀 Démarrage rapide
+## Démarrage rapide
 
 ```bash
 # 1. Installer les dépendances
@@ -15,7 +15,7 @@ npm run dev
 npm run build
 ```
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 portfolio-react/
@@ -43,28 +43,29 @@ portfolio-react/
         └── Contact.jsx
 ```
 
-## ✏️ Personnaliser le contenu
+## Personnaliser le contenu
 
-| Fichier | Ce qu'on y change |
-|---|---|
-| `src/components/Hero.jsx` | Nom, titre, stack chips |
-| `src/components/About.jsx` | Bio, stats |
-| `src/components/Education.jsx` | Diplômes |
+| Fichier                         | Ce qu'on y change            |
+| ------------------------------- | ---------------------------- |
+| `src/components/Hero.jsx`       | Nom, titre, stack chips      |
+| `src/components/About.jsx`      | Bio, stats                   |
+| `src/components/Education.jsx`  | Diplômes                     |
 | `src/components/Experience.jsx` | Les 3 startups, descriptions |
-| `src/components/Skills.jsx` | Compétences + niveaux |
-| `src/components/Projects.jsx` | Projets, liens, statuts |
-| `src/components/Hobbies.jsx` | Hobbies |
-| `src/components/Quiz.jsx` | Les 5 questions Emilien |
-| `src/components/Contact.jsx` | Email, LinkedIn, GitHub |
+| `src/components/Skills.jsx`     | Compétences + niveaux        |
+| `src/components/Projects.jsx`   | Projets, liens, statuts      |
+| `src/components/Hobbies.jsx`    | Hobbies                      |
+| `src/components/Quiz.jsx`       | Les 5 questions Emilien      |
+| `src/components/Contact.jsx`    | Email, LinkedIn, GitHub      |
 
-## 🎨 Design tokens
+## Design tokens
 
 Dans `tailwind.config.js` → `theme.extend.colors` :
+
 - `accent` = violet principal (`#7c3aed`)
 - `bg` = fond off-white (`#fafaf9`)
 - `dark` = sections sombres (`#111118`)
 
-## ☕ Quiz — question café
+## Quiz — question café
 
 La question café (Q1) a une animation de tasses qui se remplissent.
 La logique est dans `Quiz.jsx` → `CoffeeCups` component.

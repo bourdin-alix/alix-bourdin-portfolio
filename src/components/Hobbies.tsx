@@ -1,9 +1,4 @@
-const HOBBIES = [
-  { icon: '⚽', name: 'Football', desc: 'Always on the pitch' },
-  { icon: '✈️', name: 'Travel', desc: 'Always planning the next trip' },
-  { icon: '🎮', name: 'Video Games', desc: 'Competitive by nature' },
-  { icon: '☕', name: 'Coffee', desc: 'The real fuel' },
-]
+import { HOBBIES } from "../data/hobbies";
 
 export default function Hobbies() {
   return (
@@ -29,5 +24,5 @@ export default function Hobbies() {
         </div>
       </div>
     </section>
-  )
+  );
 }
