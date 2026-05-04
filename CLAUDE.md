@@ -52,3 +52,4 @@ Always read `roadmap.md` before starting any task — it's the source of truth f
 - **Never push directly to `main`** — Netlify deploys automatically on every merge, so `main` = production.
 - Every feature or fix gets its own branch: `feat/feature-name`, `fix/bug-name`.
 - Merge via PR only (even solo — keeps history clean and deployments intentional).
+- **Before starting any task**, always propose creating the appropriate branch first.
