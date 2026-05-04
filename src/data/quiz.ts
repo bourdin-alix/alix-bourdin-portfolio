@@ -1,11 +1,15 @@
+export interface AnswerFeedback {
+  message: string;
+  meme?: string; // future: image path
+}
+
 export interface Question {
   id: number;
-  type?: "coffee" | "personal" | "technical";
   label: string;
   question: string;
   options: string[];
   correct: number;
-  explanation: string;
+  feedback: AnswerFeedback[];
 }
 
 export interface QuizResult {
@@ -17,46 +21,71 @@ export interface QuizResult {
 export const QUESTIONS: Question[] = [
   {
     id: 1,
-    type: "coffee",
-    label: "Question 1 / 5 · ☕ Personal",
-    question: "How many coffees does Alix drink per day?",
-    options: ["1 ☕", "2 ☕☕", "3 ☕☕☕", "0 — just vibes 🧃"],
+    label: "Question 1 / 5 · ⚽ Personal",
+    question: "What position does Alix play in football?",
+    options: ["Goalkeeper", "Defender", "Midfielder", "Striker"],
     correct: 1,
-    explanation: "Two coffees minimum to reach peak developer mode. ☕☕",
+    feedback: [
+      { message: "Goalkeeper? Last line of defense. Not Alix's style." },
+      { message: "Solid at the back. No bugs get past the backline." },
+      { message: "Controlling the game sounds nice... but no." },
+      { message: "All attack, no defense? Missing the point." },
+    ],
   },
   {
     id: 2,
-    label: "Question 2 / 5 · ⚽ Personal",
-    question: "What position does Alix play in football?",
-    options: ["Goalkeeper", "Defender", "Midfielder", "Striker"],
-    correct: 2,
-    explanation:
-      "Midfielder — controlling the game, just like controlling the codebase.",
-  },
-  {
-    id: 3,
-    label: "Question 3 / 5 · 🎮 Personal",
+    label: "Question 2 / 5 · 🎮 Personal",
     question: "What's Alix's go-to video game genre?",
     options: ["FPS", "RPG", "Strategy", "Sports"],
     correct: 0,
-    explanation: "FPS — fast reflexes carry over to debugging sessions too.",
+    feedback: [
+      { message: "Headshots in-game, hotfixes in prod. Same reflexes." },
+      { message: "A 200-hour RPG? Alix values sleep too." },
+      { message: "Too much thinking. Already does that at work." },
+      { message: "Playing football IRL is enough." },
+    ],
   },
   {
-    id: 4,
-    label: "Question 4 / 5 · ✈️ Personal",
+    id: 3,
+    label: "Question 3 / 5 · ✈️ Personal",
     question: "If Alix could travel anywhere right now, where would it be?",
     options: ["Japan", "USA", "Brazil", "Australia"],
     correct: 0,
-    explanation: "Japan — the culture, the food, and yes, the tech.",
+    feedback: [
+      { message: "Culture, ramen, and pixel-perfect design. Easy choice. 🗾" },
+      { message: "Silicon Valley dream? Not quite." },
+      { message: "Carnaval sounds fun though." },
+      { message: "Spiders the size of your hand. Hard pass." },
+    ],
+  },
+  {
+    id: 4,
+    label: "Question 4 / 5 · 🐍 Technical",
+    question: "What's Alix's favorite programming language?",
+    options: ["Pascal", "COBOL", "Python", "Fortran"],
+    correct: 2,
+    feedback: [
+      {
+        message:
+          "Pascal? Are you trolling? That's a museum exhibit, not a language. 💀",
+      },
+      { message: "COBOL? Bold choice for someone born after 1970." },
+      { message: "Obviously. Clean, powerful, and snakes are cool. 🐍" },
+      { message: "Fortran. At least you're original." },
+    ],
   },
   {
     id: 5,
-    label: "Question 5 / 5 · 💻 Technical",
-    question: 'What HTTP status code means "I\'m a teapot"?',
-    options: ["404", "418", "500", "200"],
-    correct: 1,
-    explanation:
-      "418 I'm a Teapot — the most important RFC ever written. Any real fullstack dev knows this. ☕",
+    label: "Question 5 / 5 · ☕ Personal",
+    question: "How many coffees does Alix drink per day?",
+    options: ["1 ☕", "2 ☕☕", "3 ☕☕☕", "0 — just vibes 🧃"],
+    correct: 3,
+    feedback: [
+      { message: "One coffee? Still one too many." },
+      { message: "The dev stereotype. Not Alix." },
+      { message: "Three coffees? Absolutely not." },
+      { message: "Zero. The easter egg doesn't lie. Alix hates coffee. 🧃" },
+    ],
   },
 ];
 

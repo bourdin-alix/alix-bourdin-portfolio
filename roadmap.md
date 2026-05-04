@@ -32,9 +32,9 @@
 
 ### 5. Quiz — mèmes + phrases fun
 
-- [ ] Options plus fun, mauvaises réponses volontairement absurdes
+- [x] Options plus fun, mauvaises réponses volontairement absurdes
 - [ ] Mèmes / images sur bonne/mauvaise réponse
-- [ ] Phrases fun contextuelles par réponse
+- [x] Phrases fun contextuelles par réponse
 - [ ] Résultats finaux avec plus de personnalité
 
 ### 6. Rendre le site moins "IA"

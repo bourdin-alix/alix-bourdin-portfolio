@@ -1,6 +1,7 @@
 export interface Skill {
   name: string;
   w: number;
+  favorite?: boolean;
 }
 
 export const FRONTEND: Skill[] = [
@@ -12,7 +13,7 @@ export const FRONTEND: Skill[] = [
 
 export const BACKEND: Skill[] = [
   { name: "Node.js", w: 85 },
-  { name: "Python", w: 80 },
+  { name: "Python", w: 80, favorite: true },
   { name: "FastAPI", w: 75 },
   { name: "Git / Docker", w: 82 },
 ];
