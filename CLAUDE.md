@@ -42,3 +42,9 @@ Hosted on Netlify — production site is live. Any change merged to `main` deplo
 - Mobile-first, fully responsive (375px / 768px / 1280px).
 - Stack: React 18 + Vite 6 + Tailwind CSS 3 + TypeScript. All components in `.tsx`, data files in `src/data/*.ts`.
 - No new dependencies without a clear reason.
+
+## Git Workflow
+
+- **Never push directly to `main`** — Netlify deploys automatically on every merge, so `main` = production.
+- Every feature or fix gets its own branch: `feat/feature-name`, `fix/bug-name`.
+- Merge via PR only (even solo — keeps history clean and deployments intentional).
