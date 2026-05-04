@@ -26,9 +26,9 @@
 
 ### 4. Easter egg café — fix visuel
 
-- [ ] Revoir cracks SVG + animation de bris
-- [ ] Tester mobile
-- [ ] Vérifier affichage phrase finale
+- [x] Revoir cracks SVG + animation de bris
+- [x] Vérifier affichage phrase finale
+- [ ] Modifier l'animation
 
 ### 5. Quiz — mèmes + phrases fun
 
