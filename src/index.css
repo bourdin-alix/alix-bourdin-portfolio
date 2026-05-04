@@ -3,9 +3,18 @@
 @tailwind utilities;
 
 @layer base {
-  html { scroll-behavior: smooth; }
-  body { @apply bg-bg text-dark font-body overflow-x-hidden; }
-  h1, h2, h3, h4 { @apply font-head; }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-dark font-body overflow-x-hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-head;
+  }
 }
 
 @layer components {
@@ -25,10 +34,14 @@
     @apply text-xs font-head font-semibold tracking-widest uppercase text-accent mb-3 block;
   }
   .reveal {
-    @apply opacity-0 translate-y-7 transition-all duration-700 ease-out;
+    @apply opacity-0 scale-95;
+    transition:
+      opacity 600ms cubic-bezier(0.34, 1.56, 0.64, 1),
+      transform 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform, opacity;
   }
   .reveal.visible {
-    @apply opacity-100 translate-y-0;
+    @apply opacity-100 scale-100;
   }
 }
 
@@ -44,45 +57,93 @@
 
 /* Pulse dot */
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
-.pulse-dot { animation: pulse-dot 2s infinite; }
+.pulse-dot {
+  animation: pulse-dot 2s infinite;
+}
 
 /* Scroll bounce */
 @keyframes bounce-arrow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(4px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
 }
-.bounce-arrow { animation: bounce-arrow 2s infinite; }
+.bounce-arrow {
+  animation: bounce-arrow 2s infinite;
+}
 
 /* Confetti spin */
 @keyframes confetti-spin {
-  from { transform: rotate(-20deg) scale(0.5); }
-  to { transform: rotate(0) scale(1); }
+  from {
+    transform: rotate(-20deg) scale(0.5);
+  }
+  to {
+    transform: rotate(0) scale(1);
+  }
 }
-.confetti-spin { animation: confetti-spin 0.6s ease forwards; }
+.confetti-spin {
+  animation: confetti-spin 0.6s ease forwards;
+}
 
 /* Coffee cup fill */
 @keyframes cup-pop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1.15); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.15);
+  }
 }
-.cup-filled { animation: cup-pop 0.3s ease forwards; }
+.cup-filled {
+  animation: cup-pop 0.3s ease forwards;
+}
 
 /* Easter egg — café crack animations */
 @keyframes shake {
-  0%   { transform: translateX(0); }
-  20%  { transform: translateX(-4px) rotate(-1deg); }
-  40%  { transform: translateX(5px) rotate(1.5deg); }
-  60%  { transform: translateX(-4px) rotate(-1deg); }
-  80%  { transform: translateX(3px) rotate(0.5deg); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px) rotate(-1deg);
+  }
+  40% {
+    transform: translateX(5px) rotate(1.5deg);
+  }
+  60% {
+    transform: translateX(-4px) rotate(-1deg);
+  }
+  80% {
+    transform: translateX(3px) rotate(0.5deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes popIn {
-  0%   { opacity: 0; transform: scale(0.5) rotate(-5deg); }
-  60%  { transform: scale(1.1) rotate(2deg); }
-  100% { opacity: 1; transform: scale(1) rotate(0); }
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-5deg);
+  }
+  60% {
+    transform: scale(1.1) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
 }

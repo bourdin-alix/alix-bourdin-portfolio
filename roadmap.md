@@ -12,7 +12,7 @@
 
 ### 2. Bug Quiz — bouton "Next" mort
 
-- [ ] Supprimer le bouton "Next →" interne à `QuizQuestion` (onClick vide) — le vrai bouton est dans le parent
+- [x] Supprimer le bouton "Next →" interne à `QuizQuestion` (onClick vide) — le vrai bouton est dans le parent
 
 ---
 
@@ -20,9 +20,9 @@
 
 ### 3. Animations scroll — scale up visible
 
-- [ ] Remplacer `.reveal` (fade + translateY) par scale up marqué
-- [ ] `opacity-0 scale-95` → `opacity-100 scale-100` avec easing pop
-- [ ] Modifier `index.css`
+- [x] Remplacer `.reveal` (fade + translateY) par scale up marqué
+- [x] `opacity-0 scale-95` → `opacity-100 scale-100` avec easing pop
+- [x] Modifier `index.css`
 
 ### 4. Easter egg café — fix visuel
 
