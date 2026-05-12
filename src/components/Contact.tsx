@@ -1,6 +1,9 @@
 import { LINKS } from "../data/contact";
+import { useT } from "../hooks/useT";
 
 export default function Contact() {
+  const t = useT();
+
   return (
     <>
       <section id="contact" className="py-24 bg-dark border-t border-white/5">
@@ -8,18 +11,17 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="reveal">
               <span className="text-xs font-head font-semibold tracking-widest uppercase text-accent-mid block mb-3">
-                Contact
+                {t.contact.sectionLabel}
               </span>
               <h2 className="font-head font-bold text-white leading-tight tracking-tight text-[clamp(1.8rem,4vw,3rem)] mb-4">
-                Let's build
+                {t.contact.heading1}
                 <br />
-                <span className="text-accent-mid">something</span>
+                <span className="text-accent-mid">{t.contact.heading2}</span>
                 <br />
-                together.
+                {t.contact.heading3}
               </h2>
               <p className="text-white/40 text-sm max-w-xs leading-relaxed">
-                Open to freelance missions, collaborations, and interesting
-                projects. Drop me a line.
+                {t.contact.sub}
               </p>
             </div>
 
@@ -50,8 +52,8 @@ export default function Contact() {
 
       <footer className="bg-dark border-t border-white/5 py-5">
         <div className="max-w-5xl mx-auto px-6 flex justify-between items-center text-xs text-white/25">
-          <span>© 2025 Alix Bourdin</span>
-          <span>Fullstack Developer · Paris, France</span>
+          <span>{t.contact.footer}</span>
+          <span>{t.contact.footerSub}</span>
         </div>
       </footer>
     </>

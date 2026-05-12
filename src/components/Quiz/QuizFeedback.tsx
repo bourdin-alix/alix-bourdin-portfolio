@@ -1,4 +1,5 @@
 import { Question } from "../../data/quiz";
+import { useT } from "../../hooks/useT";
 
 interface Props {
   question: Question;
@@ -6,8 +7,12 @@ interface Props {
 }
 
 export default function QuizFeedback({ question, selectedIdx }: Props) {
+  const t = useT();
+  const tQuestion =
+    t.quiz.questions[question.slug as keyof typeof t.quiz.questions];
   const isCorrect = selectedIdx === question.correct;
   const feedback = question.feedback[selectedIdx];
+  const message = tQuestion.feedback[selectedIdx];
 
   return (
     <div
@@ -18,8 +23,7 @@ export default function QuizFeedback({ question, selectedIdx }: Props) {
       }`}
     >
       <p className="text-base flex-1">
-        {isCorrect ? "✓ Correct! " : "✗ Not quite. "}
-        {feedback.message}
+        {isCorrect ? t.quiz.correctLabel : t.quiz.wrongLabel} {message}
       </p>
       {feedback.meme && (
         <img

@@ -1,14 +1,11 @@
 export interface Hobby {
   icon: string;
-  name: string;
-  nameFr?: string;
-  desc: string;
-  descFr?: string;
+  slug: string;
 }
 
 export const HOBBIES: Hobby[] = [
-  { icon: "⚽", name: "Football", desc: "Always on the pitch" },
-  { icon: "✈️", name: "Travel", desc: "Always planning the next trip" },
-  { icon: "🎮", name: "Video Games", desc: "Competitive by nature" },
-  { icon: "☕", name: "Coffee", desc: "The real fuel" },
+  { icon: "⚽", slug: "football" },
+  { icon: "✈️", slug: "travel" },
+  { icon: "🎮", slug: "videoGames" },
+  { icon: "☕", slug: "coffee" },
 ];

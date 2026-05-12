@@ -66,18 +66,118 @@
     "heading": "Ce que j'ai construit",
     "statusLive": "En ligne",
     "statusDev": "En développement",
-    "viewLive": "Voir en ligne →"
+    "viewLive": "Voir en ligne →",
+    "descriptions": {
+      "wingstop": "Landing page de production pour Wingstop France. Rapide, épurée, orientée conversion.",
+      "stanDelivery": "Site web full-stack pour une agence de livraison — design moderne, identité de marque et SEO construits de zéro. De Figma à la production, de bout en bout.",
+      "riskManagement": "Gestion de portefeuille crypto multi-utilisateurs. Intégration sécurisée de l'API Binance, analytics temps réel et stratégies de risque automatisées — parce que surveiller un graphique à la main, c'est bon pour les amateurs."
+    }
   },
   "hobbies": {
     "sectionLabel": "En dehors du code",
-    "heading": "Au-delà de l'éditeur"
+    "heading": "Au-delà de l'éditeur",
+    "items": {
+      "football": { "name": "Football", "desc": "Toujours sur le terrain" },
+      "travel": {
+        "name": "Voyage",
+        "desc": "Toujours en train de planifier le prochain"
+      },
+      "videoGames": { "name": "Jeux vidéo", "desc": "Compétiteur dans l'âme" },
+      "coffee": { "name": "Café", "desc": "Le vrai carburant" }
+    }
   },
   "quiz": {
     "sectionLabel": "Le Quiz",
     "heading": "Peux-tu battre Emilien ?",
     "reference": "🏆 Emilien · Les 12 Coups de Midi · Score : 5/5 — littéralement imbattable",
     "nextBtn": "Question suivante →",
-    "resultsBtn": "Voir tes résultats 🏆"
+    "resultsBtn": "Voir tes résultats 🏆",
+    "correctLabel": "✓ Correct !",
+    "wrongLabel": "✗ Pas tout à fait.",
+    "contactBtn": "Contacter Alix →",
+    "questions": {
+      "q1": {
+        "label": "Question 1 / 5 · ⚽ Personnel",
+        "question": "À quel poste joue Alix au football ?",
+        "options": ["Gardien", "Défenseur", "Milieu", "Attaquant"],
+        "feedback": [
+          "Faux. Ça fait mal quand même.",
+          "Défenseur. Je tacle fort — je récupère souvent le ballon. Parfois le mec. Ramos serait fier.",
+          "Faux. Ça fait mal quand même.",
+          "Faux. Ça fait mal quand même."
+        ]
+      },
+      "q2": {
+        "label": "Question 2 / 5 · 🎮 Personnel",
+        "question": "Quel est le genre de jeu vidéo préféré d'Alix ?",
+        "options": ["FPS", "RPG", "Stratégie", "Sport"],
+        "feedback": [
+          "FPS. Headshots in-game, hotfixes en prod. Les mêmes réflexes.",
+          "Dans les choux. Tu n'étais même pas proche.",
+          "Dans les choux. Tu n'étais même pas proche.",
+          "Dans les choux. Tu n'étais même pas proche."
+        ]
+      },
+      "q3": {
+        "label": "Question 3 / 5 · ✈️ Personnel",
+        "question": "Si Alix pouvait voyager n'importe où maintenant, ce serait où ?",
+        "options": ["Japon", "USA", "Brésil", "Australie"],
+        "feedback": [
+          "Japon. Grand fan de Dragon Ball, grand fan de la culture japonaise. La destination de rêve. 🐉",
+          "Pas ma destination de rêve.",
+          "Pas ma destination de rêve.",
+          "Pas ma destination de rêve."
+        ]
+      },
+      "q4": {
+        "label": "Question 4 / 5 · 🐍 Technique",
+        "question": "Quel est le langage de programmation préféré d'Alix ?",
+        "options": ["Pascal", "React", "Python", "PHP"],
+        "feedback": [
+          "Pascal ? Tu trolles ? C'est une pièce de musée, pas un langage. 💀",
+          "Non.",
+          "Évidemment. Élégant, puissant, et les serpents c'est cool. 🐍",
+          "Non."
+        ]
+      },
+      "q5": {
+        "label": "Question 5 / 5 · ☕ Personnel",
+        "question": "Combien de cafés Alix boit-il par jour ?",
+        "options": ["1 ☕", "2 ☕☕", "3 ☕☕☕", "0 — juste du flow 🧃"],
+        "feedback": [
+          "Faux. Mais il y a quelque chose de caché sur cette page à propos du café... regarde bien. 👀",
+          "Faux. Mais il y a quelque chose de caché sur cette page à propos du café... regarde bien. 👀",
+          "Faux. Mais il y a quelque chose de caché sur cette page à propos du café... regarde bien. 👀",
+          "Zéro ?! Comment tu as deviné ça ?? 🧃"
+        ]
+      }
+    },
+    "results": {
+      "5": {
+        "title": "Tu es aussi bon qu'Emilien...",
+        "msg": "...mais pas meilleur. La légende reste invaincu."
+      },
+      "4": {
+        "title": "Beau score !",
+        "msg": "Je suis vraiment impressionné. Je ne l'avais pas vu venir."
+      },
+      "3": {
+        "title": "Pas mal...",
+        "msg": "Mais on peut faire mieux. Emilien aurait eu les cinq."
+      },
+      "2": {
+        "title": "C'est assez mauvais.",
+        "msg": "Deux sur cinq. Tu as deviné, ou c'est encore pire ?"
+      },
+      "1": {
+        "title": "C'est vraiment mauvais.",
+        "msg": "Un point sur 5. C'était exprès ? Emilien est dévasté."
+      },
+      "0": {
+        "title": "C'est embarrassant.",
+        "msg": "Je n'ai jamais vu ça. Jamais. Emilien non plus."
+      }
+    }
   },
   "contact": {
     "sectionLabel": "Contact",

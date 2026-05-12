@@ -1,4 +1,5 @@
 import { Question } from "../../data/quiz";
+import { useT } from "../../hooks/useT";
 import QuizFeedback from "./QuizFeedback";
 
 interface Props {
@@ -35,17 +36,21 @@ export default function QuizQuestion({
   selectedIdx,
   onSelect,
 }: Props) {
+  const t = useT();
+  const tQuestion =
+    t.quiz.questions[question.slug as keyof typeof t.quiz.questions];
+
   return (
     <div className="bg-white/5 border border-white/10 rounded-2xl p-6 max-w-2xl mx-auto">
       <p className="text-xs text-accent-mid font-head font-semibold tracking-widest uppercase mb-2">
-        {question.label}
+        {tQuestion.label}
       </p>
       <p className="text-xl font-head font-bold text-white mb-5 leading-snug">
-        {question.question}
+        {tQuestion.question}
       </p>
 
       <div className="grid grid-cols-2 gap-2.5">
-        {question.options.map((opt, i) => (
+        {tQuestion.options.map((opt, i) => (
           <button
             key={i}
             onClick={() => onSelect(i)}

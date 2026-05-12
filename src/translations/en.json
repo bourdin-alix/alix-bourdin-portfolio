@@ -67,18 +67,115 @@
     "heading": "Things I've Built",
     "statusLive": "Live",
     "statusDev": "In development",
-    "viewLive": "View live →"
+    "viewLive": "View live →",
+    "descriptions": {
+      "wingstop": "Production landing page for Wingstop France. Fast, clean, conversion-focused.",
+      "stanDelivery": "Full-stack website for a delivery agency — modern design, brand identity, and SEO built from scratch. End-to-end, from Figma to production.",
+      "riskManagement": "Multi-user crypto portfolio management. Secure Binance API integration, real-time analytics, and automated risk strategies — because watching a chart manually is for amateurs."
+    }
   },
   "hobbies": {
     "sectionLabel": "Outside the code",
-    "heading": "Beyond the Editor"
+    "heading": "Beyond the Editor",
+    "items": {
+      "football": { "name": "Football", "desc": "Always on the pitch" },
+      "travel": { "name": "Travel", "desc": "Always planning the next trip" },
+      "videoGames": { "name": "Video Games", "desc": "Competitive by nature" },
+      "coffee": { "name": "Coffee", "desc": "The real fuel" }
+    }
   },
   "quiz": {
     "sectionLabel": "The Quiz",
     "heading": "Can you beat Emilien?",
     "reference": "🏆 Emilien · Les 12 Coups de Midi · Score: 5/5 — literally unbeatable",
     "nextBtn": "Next question →",
-    "resultsBtn": "See your results 🏆"
+    "resultsBtn": "See your results 🏆",
+    "correctLabel": "✓ Correct!",
+    "wrongLabel": "✗ Not quite.",
+    "contactBtn": "Contact Alix →",
+    "questions": {
+      "q1": {
+        "label": "Question 1 / 5 · ⚽ Personal",
+        "question": "What position does Alix play in football?",
+        "options": ["Goalkeeper", "Defender", "Midfielder", "Striker"],
+        "feedback": [
+          "Wrong. That one hit different.",
+          "Defender. I tackle hard — usually get the ball. Sometimes the man. Ramos would be proud.",
+          "Wrong. That one hit different.",
+          "Wrong. That one hit different."
+        ]
+      },
+      "q2": {
+        "label": "Question 2 / 5 · 🎮 Personal",
+        "question": "What's Alix's go-to video game genre?",
+        "options": ["FPS", "RPG", "Strategy", "Sports"],
+        "feedback": [
+          "FPS. Headshots in-game, hotfixes in prod. Same reflexes.",
+          "Airball. You were nowhere close.",
+          "Airball. You were nowhere close.",
+          "Airball. You were nowhere close."
+        ]
+      },
+      "q3": {
+        "label": "Question 3 / 5 · ✈️ Personal",
+        "question": "If Alix could travel anywhere right now, where would it be?",
+        "options": ["Japan", "USA", "Brazil", "Australia"],
+        "feedback": [
+          "Japan. Big Dragon Ball fan, big Japanese culture fan. The dream destination. 🐉",
+          "Not my dream destination.",
+          "Not my dream destination.",
+          "Not my dream destination."
+        ]
+      },
+      "q4": {
+        "label": "Question 4 / 5 · 🐍 Technical",
+        "question": "What's Alix's favorite programming language?",
+        "options": ["Pascal", "React", "Python", "PHP"],
+        "feedback": [
+          "Pascal? Are you trolling? That's a museum exhibit, not a language. 💀",
+          "Nope.",
+          "Obviously. Clean, powerful, and snakes are cool. 🐍",
+          "Nope."
+        ]
+      },
+      "q5": {
+        "label": "Question 5 / 5 · ☕ Personal",
+        "question": "How many coffees does Alix drink per day?",
+        "options": ["1 ☕", "2 ☕☕", "3 ☕☕☕", "0 — just vibes 🧃"],
+        "feedback": [
+          "Wrong. But there's something hidden on this page about coffee... look closer. 👀",
+          "Wrong. But there's something hidden on this page about coffee... look closer. 👀",
+          "Wrong. But there's something hidden on this page about coffee... look closer. 👀",
+          "Zero?! How did you even figure that out?? 🧃"
+        ]
+      }
+    },
+    "results": {
+      "5": {
+        "title": "You're as good as Emilien...",
+        "msg": "...but not better. The legend stays undefeated."
+      },
+      "4": {
+        "title": "Great score!",
+        "msg": "I'm genuinely impressed. Didn't see that coming."
+      },
+      "3": {
+        "title": "Not bad...",
+        "msg": "But could do better. Emilien would have nailed all five."
+      },
+      "2": {
+        "title": "That's pretty bad.",
+        "msg": "Two out of five. Did you guess, or is it actually worse?"
+      },
+      "1": {
+        "title": "That's really bad.",
+        "msg": "One point out of 5. Was that on purpose? Emilien is devastated."
+      },
+      "0": {
+        "title": "That's embarrassing.",
+        "msg": "I've never seen anything like this. Never. Neither has Emilien."
+      }
+    }
   },
   "contact": {
     "sectionLabel": "Contact",

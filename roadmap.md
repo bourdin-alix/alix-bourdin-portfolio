@@ -66,7 +66,7 @@
 - [x] Infrastructure : `LanguageContext` + `useT()` + JSONs EN/FR
 - [x] Toggle 🇫🇷/🇬🇧 dans la Nav
 - [x] Nav, Hero, About, Education, Experience, Skills
-- [ ] Projects — strings statiques + descriptions dans JSON (`projects.descriptions.slug`)
-- [ ] Hobbies — strings statiques + noms/descriptions dans JSON (`hobbies.descriptions.slug`)
-- [ ] Quiz — strings statiques + questions/options/messages dans JSON
-- [ ] Contact — strings statiques uniquement
+- [x] Projects — strings statiques + descriptions dans JSON (`projects.descriptions.slug`)
+- [x] Hobbies — strings statiques + noms/descriptions dans JSON (`hobbies.items.slug`)
+- [x] Quiz — strings statiques + questions/options/feedbacks/résultats dans JSON
+- [x] Contact — strings statiques uniquement

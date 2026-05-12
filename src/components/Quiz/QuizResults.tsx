@@ -1,4 +1,5 @@
 import { QuizResult } from "../../data/quiz";
+import { useT } from "../../hooks/useT";
 
 interface Props {
   score: number;
@@ -7,6 +8,10 @@ interface Props {
 }
 
 export default function QuizResults({ score, total, result }: Props) {
+  const t = useT();
+  const tResult =
+    t.quiz.results[score.toString() as keyof typeof t.quiz.results];
+
   return (
     <div className="text-center max-w-lg mx-auto pt-4">
       <div className="text-5xl mb-4 confetti-spin inline-block">
@@ -21,9 +26,9 @@ export default function QuizResults({ score, total, result }: Props) {
       <div className="flex items-center gap-6 mt-8 text-left">
         <div className="flex-1">
           <h3 className="font-head font-bold text-white text-2xl mb-2">
-            {result.title}
+            {tResult.title}
           </h3>
-          <p className="text-white/50">{result.msg}</p>
+          <p className="text-white/50">{tResult.msg}</p>
         </div>
         {result.meme && (
           <img
@@ -35,7 +40,7 @@ export default function QuizResults({ score, total, result }: Props) {
       </div>
       <div className="mt-8">
         <a href="#contact" className="btn-primary">
-          Contact Alix →
+          {t.quiz.contactBtn}
         </a>
       </div>
     </div>
