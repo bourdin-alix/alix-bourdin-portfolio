@@ -16,6 +16,7 @@ export interface QuizResult {
   emoji: string;
   title: string;
   msg: string;
+  meme?: string;
 }
 
 export const QUESTIONS: Question[] = [
@@ -26,10 +27,23 @@ export const QUESTIONS: Question[] = [
     options: ["Goalkeeper", "Defender", "Midfielder", "Striker"],
     correct: 1,
     feedback: [
-      { message: "Goalkeeper? Last line of defense. Not Alix's style." },
-      { message: "Solid at the back. No bugs get past the backline." },
-      { message: "Controlling the game sounds nice... but no." },
-      { message: "All attack, no defense? Missing the point." },
+      {
+        message: "Wrong. That one hit different.",
+        meme: "https://media1.tenor.com/m/6iuqhjh5vHgAAAAd/michy-batshuayi.gif",
+      },
+      {
+        message:
+          "Defender. I tackle hard — usually get the ball. Sometimes the man. Ramos would be proud.",
+        meme: "https://media1.tenor.com/m/dJLYuptX_lEAAAAC/sergio-ramos-river.gif",
+      },
+      {
+        message: "Wrong. That one hit different.",
+        meme: "https://media1.tenor.com/m/6iuqhjh5vHgAAAAd/michy-batshuayi.gif",
+      },
+      {
+        message: "Wrong. That one hit different.",
+        meme: "https://media1.tenor.com/m/6iuqhjh5vHgAAAAd/michy-batshuayi.gif",
+      },
     ],
   },
   {
@@ -39,10 +53,22 @@ export const QUESTIONS: Question[] = [
     options: ["FPS", "RPG", "Strategy", "Sports"],
     correct: 0,
     feedback: [
-      { message: "Headshots in-game, hotfixes in prod. Same reflexes." },
-      { message: "A 200-hour RPG? Alix values sleep too." },
-      { message: "Too much thinking. Already does that at work." },
-      { message: "Playing football IRL is enough." },
+      {
+        message: "FPS. Headshots in-game, hotfixes in prod. Same reflexes.",
+        meme: "https://media1.tenor.com/m/7RA3rtOFYVkAAAAd/very-nice-excellent.gif",
+      },
+      {
+        message: "Airball. You were nowhere close.",
+        meme: "https://media1.tenor.com/m/6-sW1bbBIRoAAAAC/air-ball.gif",
+      },
+      {
+        message: "Airball. You were nowhere close.",
+        meme: "https://media1.tenor.com/m/6-sW1bbBIRoAAAAC/air-ball.gif",
+      },
+      {
+        message: "Airball. You were nowhere close.",
+        meme: "https://media1.tenor.com/m/6-sW1bbBIRoAAAAC/air-ball.gif",
+      },
     ],
   },
   {
@@ -52,26 +78,49 @@ export const QUESTIONS: Question[] = [
     options: ["Japan", "USA", "Brazil", "Australia"],
     correct: 0,
     feedback: [
-      { message: "Culture, ramen, and pixel-perfect design. Easy choice. 🗾" },
-      { message: "Silicon Valley dream? Not quite." },
-      { message: "Carnaval sounds fun though." },
-      { message: "Spiders the size of your hand. Hard pass." },
+      {
+        message:
+          "Japan. Big Dragon Ball fan, big Japanese culture fan. The dream destination. 🐉",
+        meme: "https://media1.tenor.com/m/uOHj2K7TsQQAAAAC/dragon-ball-goku.gif",
+      },
+      {
+        message: "Not my dream destination.",
+        meme: "https://media1.tenor.com/m/81qX_d9U9GQAAAAd/yamcha-yamcha-death-pose.gif",
+      },
+      {
+        message: "Not my dream destination.",
+        meme: "https://media1.tenor.com/m/81qX_d9U9GQAAAAd/yamcha-yamcha-death-pose.gif",
+      },
+      {
+        message: "Not my dream destination.",
+        meme: "https://media1.tenor.com/m/81qX_d9U9GQAAAAd/yamcha-yamcha-death-pose.gif",
+      },
     ],
   },
   {
     id: 4,
     label: "Question 4 / 5 · 🐍 Technical",
     question: "What's Alix's favorite programming language?",
-    options: ["Pascal", "COBOL", "Python", "Fortran"],
+    options: ["Pascal", "React", "Python", "PHP"],
     correct: 2,
     feedback: [
       {
         message:
           "Pascal? Are you trolling? That's a museum exhibit, not a language. 💀",
+        meme: "https://media1.tenor.com/m/T42cqp6YKEEAAAAC/damn-damn-damn-damn.gif",
       },
-      { message: "COBOL? Bold choice for someone born after 1970." },
-      { message: "Obviously. Clean, powerful, and snakes are cool. 🐍" },
-      { message: "Fortran. At least you're original." },
+      {
+        message: "Nope.",
+        meme: "https://media1.tenor.com/m/EIgwLZREaWoAAAAC/nope-no.gif",
+      },
+      {
+        message: "Obviously. Clean, powerful, and snakes are cool. 🐍",
+        meme: "https://media1.tenor.com/m/6vjzHxepwDkAAAAC/pout-kiss.gif",
+      },
+      {
+        message: "Nope.",
+        meme: "https://media1.tenor.com/m/EIgwLZREaWoAAAAC/nope-no.gif",
+      },
     ],
   },
   {
@@ -81,10 +130,25 @@ export const QUESTIONS: Question[] = [
     options: ["1 ☕", "2 ☕☕", "3 ☕☕☕", "0 — just vibes 🧃"],
     correct: 3,
     feedback: [
-      { message: "One coffee? Still one too many." },
-      { message: "The dev stereotype. Not Alix." },
-      { message: "Three coffees? Absolutely not." },
-      { message: "Zero. The easter egg doesn't lie. Alix hates coffee. 🧃" },
+      {
+        message:
+          "Wrong. But there's something hidden on this page about coffee... look closer. 👀",
+        meme: "https://media1.tenor.com/m/vPKL-jpIvPwAAAAd/shrek.gif",
+      },
+      {
+        message:
+          "Wrong. But there's something hidden on this page about coffee... look closer. 👀",
+        meme: "https://media1.tenor.com/m/vPKL-jpIvPwAAAAd/shrek.gif",
+      },
+      {
+        message:
+          "Wrong. But there's something hidden on this page about coffee... look closer. 👀",
+        meme: "https://media1.tenor.com/m/vPKL-jpIvPwAAAAd/shrek.gif",
+      },
+      {
+        message: "Zero?! How did you even figure that out?? 🧃",
+        meme: "https://media1.tenor.com/m/mihaFlWstesAAAAd/john-cena.gif",
+      },
     ],
   },
 ];
@@ -92,32 +156,38 @@ export const QUESTIONS: Question[] = [
 export const RESULTS: Record<number, QuizResult> = {
   5: {
     emoji: "🏆",
-    title: "You ARE Emilien!",
-    msg: "Legendary status unlocked. Les 12 Coups de Midi would never be the same.",
+    title: "You're as good as Emilien...",
+    msg: "...but not better. The legend stays undefeated.",
+    meme: "https://media1.tenor.com/m/pg5XnnpbaZYAAAAC/emilien-12coupsdemidi.gif",
   },
   4: {
     emoji: "💪",
-    title: "Almost Emilien level!",
-    msg: "Respect. You clearly paid attention. One slip-up away from legend status.",
+    title: "Great score!",
+    msg: "I'm genuinely impressed. Didn't see that coming.",
+    meme: "https://media1.tenor.com/m/3gPvMpiZ9A0AAAAd/h-o-l-y-s-h-i-t-boom.gif",
   },
   3: {
     emoji: "😄",
-    title: "Not bad at all!",
-    msg: "You know your stuff — just not all of it. Good try!",
+    title: "Not bad...",
+    msg: "But could do better. Emilien would have nailed all five.",
+    meme: "https://media1.tenor.com/m/ry0_qC8zaGMAAAAd/pesado-dios-mio.gif",
   },
   2: {
     emoji: "🤔",
-    title: "Still learning...",
-    msg: "Good try! Even champions lose sometimes. Emilien remains undefeated.",
+    title: "That's pretty bad.",
+    msg: "Two out of five. Did you guess, or is it actually worse?",
+    meme: "https://media1.tenor.com/m/jEea_fsP-IAAAAAd/monkey-thinking.gif",
   },
   1: {
     emoji: "😅",
-    title: "Lucky guess?",
-    msg: "One point is a start. Emilien sends his regards.",
+    title: "That's really bad.",
+    msg: "One point out of 5. Was that on purpose? Emilien is devastated.",
+    meme: "https://media1.tenor.com/m/jEea_fsP-IAAAAAd/monkey-thinking.gif",
   },
   0: {
     emoji: "💀",
-    title: "Emilien is not impressed.",
-    msg: "0/5. Remarkable in its own way. Emilien sends his regards.",
+    title: "That's embarrassing.",
+    msg: "I've never seen anything like this. Never. Neither has Emilien.",
+    meme: "https://media1.tenor.com/m/61_Dk_6lhAYAAAAd/bad-mood-angry.gif",
   },
 };

@@ -18,13 +18,26 @@ export default function QuizResults({ score, total, result }: Props) {
       >
         <span className="text-accent-mid">{score}</span> / {total}
       </div>
-      <h3 className="font-head font-bold text-white text-2xl mt-3 mb-2">
-        {result.title}
-      </h3>
-      <p className="text-white/50 mb-8">{result.msg}</p>
-      <a href="#contact" className="btn-primary">
-        Contact Alix →
-      </a>
+      <div className="flex items-center gap-6 mt-8 text-left">
+        <div className="flex-1">
+          <h3 className="font-head font-bold text-white text-2xl mb-2">
+            {result.title}
+          </h3>
+          <p className="text-white/50">{result.msg}</p>
+        </div>
+        {result.meme && (
+          <img
+            src={result.meme}
+            alt="meme"
+            className="w-40 rounded-lg flex-shrink-0"
+          />
+        )}
+      </div>
+      <div className="mt-8">
+        <a href="#contact" className="btn-primary">
+          Contact Alix →
+        </a>
+      </div>
     </div>
   );
 }
