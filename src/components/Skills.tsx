@@ -1,9 +1,12 @@
 import { FRONTEND, BACKEND, Skill } from "../data/skills";
 
-function SkillBar({ name, w }: Skill) {
+function SkillBar({ name, w, favorite }: Skill) {
   return (
     <div className="flex items-center gap-3 mb-3">
-      <span className="text-sm font-medium w-28 flex-shrink-0">{name}</span>
+      <span className="text-sm font-medium w-28 flex-shrink-0">
+        {name}
+        {favorite && <span className="ml-1 text-red-400">❤️</span>}
+      </span>
       <div className="flex-1 h-1.5 bg-gray-100 rounded-full overflow-hidden">
         <div
           className="skill-fill h-full bg-accent rounded-full"
