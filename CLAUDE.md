@@ -43,6 +43,19 @@ Hosted on Netlify — production site is live. Any change merged to `main` deplo
 - Stack: React 18 + Vite 6 + Tailwind CSS 3 + TypeScript. All components in `.tsx`, data files in `src/data/*.ts`.
 - No new dependencies without a clear reason.
 
+## Internationalisation (FR / EN)
+
+Fichiers JSON : `src/translations/en.json` + `fr.json` — toutes les strings UI y vivent.  
+Hook : `useT()` (`src/hooks/useT.ts`) → retourne `t` typé selon la langue active.  
+Contexte : `useLang()` (`src/context/LanguageContext.tsx`) → `{ lang, setLang }`.
+
+**Règles :**
+
+- Strings statiques → `t.section.key` directement dans le JSX.
+- Descriptions de data files (jobs, projets…) → dans le JSON sous `section.descriptions.slug`, champ `slug` dans le data file, accès via `t.section.descriptions[item.slug]`.
+- Ne pas utiliser `localize()` ni les champs `*Fr?` dans les data files — tout va dans le JSON.
+- Noms propres, tags tech, dates → hardcodés, pas à traduire.
+
 ## Roadmap
 
 Always read `roadmap.md` before starting any task — it's the source of truth for what needs to be done.

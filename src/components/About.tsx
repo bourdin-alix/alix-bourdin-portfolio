@@ -1,20 +1,10 @@
 import { useState } from "react";
+import { useT } from "../hooks/useT";
 
-const WORDS = [
-  "I ",
-  "drink ",
-  "at ",
-  "least ",
-  "two ",
-  "coffees ",
-  "in ",
-  "the ",
-  "morning ",
-  "to ",
-  "wake ",
-  "up.",
-];
-const HIDDEN = "I actually hate coffee !!!";
+interface CafeEasterEggProps {
+  words: string[];
+  hidden: string;
+}
 
 const CRACKS = [
   <svg
@@ -114,7 +104,7 @@ const SCATTER = [
   { x: -28, y: -38, rot: 20 },
 ];
 
-export function CafeEasterEgg() {
+export function CafeEasterEgg({ words, hidden }: CafeEasterEggProps) {
   const [clicks, setClicks] = useState(0);
   const [shattered, setShattered] = useState(false);
   const [revealed, setRevealed] = useState(false);
@@ -136,7 +126,7 @@ export function CafeEasterEgg() {
   if (revealed) {
     return (
       <span className="inline-flex items-center gap-2 font-semibold text-accent animate-[popIn_0.5s_cubic-bezier(0.34,1.56,0.64,1)_forwards]">
-        {HIDDEN} ☕🚫
+        {hidden} ☕🚫
       </span>
     );
   }
@@ -157,7 +147,7 @@ export function CafeEasterEgg() {
             : ""
         }`}
       >
-        {WORDS.map((word, i) => (
+        {words.map((word, i) => (
           <span
             key={i}
             className="whitespace-pre transition-all duration-500"
@@ -179,31 +169,29 @@ export function CafeEasterEgg() {
 }
 
 export default function About() {
+  const t = useT();
+
   return (
     <section id="about" className="py-24 border-t border-gray-100">
       <div className="max-w-5xl mx-auto px-6">
-        <span className="section-label reveal">About</span>
+        <span className="section-label reveal">{t.about.sectionLabel}</span>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
           {/* Left */}
           <div className="reveal">
             <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-5">
-              "Building fast,
+              {t.about.heading1}
               <br />
-              <span className="text-accent">shipping faster.</span>"
+              <span className="text-accent">{t.about.heading2}</span>
             </h2>
-            <p className="text-gray-500 leading-relaxed mb-4">
-              I'm a fullstack developer with a Master 2 from Epitech. I spent 3
-              years at fast-moving French startups — where I learned to build
-              end-to-end, own features, and ship things that matter.
-            </p>
-            <p className="text-gray-500 leading-relaxed mb-4">
-              Now freelancing, I bring that startup mindset — speed, ownership,
-              pragmatism — to every project I take on.
-            </p>
+            <p className="text-gray-500 leading-relaxed mb-4">{t.about.bio1}</p>
+            <p className="text-gray-500 leading-relaxed mb-4">{t.about.bio2}</p>
             {/* Easter egg sentence */}
             <p className="text-gray-500 leading-relaxed">
-              <CafeEasterEgg />
+              <CafeEasterEgg
+                words={t.about.easterEggWords}
+                hidden={t.about.easterEggHidden}
+              />
             </p>
           </div>
 
@@ -211,9 +199,9 @@ export default function About() {
           <div className="reveal">
             <div className="grid grid-cols-3 gap-4 mb-6">
               {[
-                { num: "3", label: "Years exp" },
-                { num: "3", label: "Startups" },
-                { num: "5+", label: "Projects" },
+                { num: "3", label: t.about.statsYears },
+                { num: "3", label: t.about.statsStartups },
+                { num: "5+", label: t.about.statsProjects },
               ].map(({ num, label }) => (
                 <div
                   key={label}
@@ -228,8 +216,7 @@ export default function About() {
             </div>
             <div className="bg-accent-light border-l-4 border-accent rounded-lg p-4">
               <p className="text-sm text-accent-dark italic">
-                "Give me a clear problem and I'll have a working solution before
-                the standup ends."
+                "{t.about.quote}"
               </p>
             </div>
           </div>

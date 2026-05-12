@@ -1,14 +1,17 @@
 import { EDU } from "../data/education";
+import { useT } from "../hooks/useT";
 
 export default function Education() {
+  const t = useT();
+
   return (
     <section id="education" className="py-24 border-t border-gray-100">
       <div className="max-w-5xl mx-auto px-6">
-        <span className="section-label reveal">Education</span>
+        <span className="section-label reveal">{t.education.sectionLabel}</span>
         <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-12 reveal">
-          Academic
+          {t.education.heading1}
           <br />
-          Background
+          {t.education.heading2}
         </h2>
 
         {/* Desktop horizontal timeline */}

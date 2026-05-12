@@ -47,7 +47,12 @@
   "experience": {
     "sectionLabel": "Expérience",
     "heading1": "3 ans,",
-    "heading2": "3 startups"
+    "heading2": "3 startups",
+    "descriptions": {
+      "eteos": "Travaillé sur la plateforme principale de bout en bout — des frontends React aux APIs backend. Livraison de fonctionnalités dans un environnement en évolution rapide.",
+      "upfund": "Développé et maintenu la plateforme de crowdfunding. Travaillé aussi bien sur l'interface investisseur que sur l'infrastructure backend.",
+      "petiteMarelle": "Première expérience en startup. Contribué aux fonctionnalités e-commerce en terminant mon Bachelor — appris à livrer sous pression produit réelle."
+    }
   },
   "skills": {
     "sectionLabel": "Compétences",
