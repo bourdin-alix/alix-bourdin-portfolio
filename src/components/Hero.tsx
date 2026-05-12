@@ -66,10 +66,12 @@ export default function Hero() {
           </div>
 
           {/* Photo */}
-          <div className="hidden md:block w-48 xl:w-60 self-stretch reveal">
-            <div className="w-full h-full min-h-[280px] bg-accent-light border-2 border-dashed border-accent-mid rounded-lg flex items-center justify-center text-accent-mid text-sm font-medium">
-              Photo
-            </div>
+          <div className="hidden md:block w-82 xl:w-106 self-stretch reveal">
+            <img
+              src="/images/profile.webp"
+              alt="Alix Bourdin"
+              className="w-full h-full min-h-[280px] object-cover rounded-lg"
+            />
           </div>
         </div>
       </div>

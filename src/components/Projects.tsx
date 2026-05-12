@@ -1,5 +1,44 @@
+import { useEffect, useRef } from "react";
 import { PROJECTS, Project } from "../data/projects";
 import { useT } from "../hooks/useT";
+
+function VideoPreview({ src, tall = false }: { src: string; tall?: boolean }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 },
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      className={`overflow-hidden border-b border-gray-100 bg-gray-50 ${
+        tall ? "h-96" : "h-72"
+      }`}
+    >
+      <video
+        ref={videoRef}
+        src={src}
+        className="w-full h-full object-cover object-top"
+        muted
+        playsInline
+      />
+    </div>
+  );
+}
 
 const StatusBadge = ({
   status,
@@ -31,9 +70,7 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 gap-5">
           {/* Featured */}
           <div className="md:col-span-2 bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-250 reveal">
-            <div className="h-52 bg-accent-light flex items-center justify-center text-accent-mid text-sm font-medium border-b border-gray-100">
-              [ Wingstop Landing Page — screenshot placeholder ]
-            </div>
+            {featured.video && <VideoPreview src={featured.video} tall />}
             <div className="p-5">
               <StatusBadge
                 status={featured.status}
@@ -69,14 +106,18 @@ export default function Projects() {
           </div>
 
           {/* Grid cards */}
-          {rest.map(({ name, slug, status, tags }) => (
+          {rest.map(({ name, slug, status, tags, video }) => (
             <div
               key={name}
               className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-250 reveal"
             >
-              <div className="h-36 bg-accent-light flex items-center justify-center text-accent-mid text-sm font-medium border-b border-gray-100">
-                [ {name} ]
-              </div>
+              {video ? (
+                <VideoPreview src={video} />
+              ) : (
+                <div className="h-36 bg-accent-light flex items-center justify-center text-accent-mid text-sm font-medium border-b border-gray-100">
+                  [ {name} ]
+                </div>
+              )}
               <div className="p-5">
                 <StatusBadge
                   status={status}

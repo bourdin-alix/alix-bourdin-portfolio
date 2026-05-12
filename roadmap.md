@@ -6,8 +6,8 @@
 
 - [x] Email : `alix@example.com` → `bourdinalix@gmail.com`
 - [x] URLs LinkedIn + GitHub (Contact.jsx)
-- [ ] Photo Hero (remplacer placeholder)
-- [ ] Screenshots / visuels projets (3 placeholders)
+- [x] Photo Hero (remplacer placeholder)
+- [x] Screenshots / visuels projets — vidéos MP4 pour les 3 projets (Stan Delivery, Wingstop, Risk Management)
 - [x] Descriptions Stan Delivery + Risk Management SaaS à enrichir
 
 ### 2. Bug Quiz — bouton "Next" mort
