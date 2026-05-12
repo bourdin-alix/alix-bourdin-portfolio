@@ -1,17 +1,23 @@
 import { JOBS } from "../data/experience";
+import { useT } from "../hooks/useT";
 
 export default function Experience() {
+  const t = useT();
+
   return (
     <section id="experience" className="py-24 border-t border-gray-100">
       <div className="max-w-5xl mx-auto px-6">
-        <span className="section-label reveal">Experience</span>
+        <span className="section-label reveal">
+          {t.experience.sectionLabel}
+        </span>
         <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-10 reveal">
-          3 Years,
-          <br />3 Startups
+          {t.experience.heading1}
+          <br />
+          {t.experience.heading2}
         </h2>
 
         <div className="flex flex-col gap-5">
-          {JOBS.map(({ company, role, period, desc, tags }) => (
+          {JOBS.map(({ company, role, period, slug, tags }) => (
             <div
               key={company}
               className="grid bg-white border border-gray-200 rounded-xl overflow-hidden reveal
@@ -30,12 +36,12 @@ export default function Experience() {
                   </span>
                 </div>
                 <p className="text-sm text-gray-500 leading-relaxed mt-2 mb-3">
-                  {desc}
+                  {t.experience.descriptions[slug]}
                 </p>
                 <div className="flex flex-wrap gap-1.5">
-                  {tags.map((t) => (
-                    <span key={t} className="tag">
-                      {t}
+                  {tags.map((tag) => (
+                    <span key={tag} className="tag">
+                      {tag}
                     </span>
                   ))}
                 </div>

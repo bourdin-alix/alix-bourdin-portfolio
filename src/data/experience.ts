@@ -1,8 +1,10 @@
+export type JobSlug = "eteos" | "upfund" | "petiteMarelle";
+
 export interface Job {
   company: string;
   role: string;
   period: string;
-  desc: string;
+  slug: JobSlug;
   tags: string[];
 }
 
@@ -11,21 +13,21 @@ export const JOBS: Job[] = [
     company: "Eteos",
     role: "Fullstack Developer",
     period: "2023 – 2024",
-    desc: "Worked on the core platform end-to-end — from React frontends to backend APIs. Shipped features in a fast-moving environment.",
+    slug: "eteos",
     tags: ["React", "TypeScript", "Node.js", "PostgreSQL"],
   },
   {
     company: "Upfund",
     role: "Fullstack Developer",
     period: "2022 – 2023",
-    desc: "Built and maintained the crowdfunding platform. Worked on both the investor-facing UI and the backend infrastructure.",
+    slug: "upfund",
     tags: ["React", "TypeScript", "Python", "FastAPI"],
   },
   {
     company: "Petite Marelle",
     role: "Fullstack Developer",
     period: "2021 – 2022",
-    desc: "First startup experience. Contributed to e-commerce features while finishing my Bachelor's — learned to ship under real product pressure.",
+    slug: "petiteMarelle",
     tags: ["React", "Node.js", "PostgreSQL"],
   },
 ];

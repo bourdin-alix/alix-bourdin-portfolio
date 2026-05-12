@@ -1,4 +1,8 @@
+import { useT } from "../hooks/useT";
+
 export default function Hero() {
+  const t = useT();
+
   return (
     <section
       id="hero"
@@ -16,9 +20,7 @@ export default function Hero() {
           <div className="py-12">
             <div className="flex items-center gap-3 mb-6 reveal">
               <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-dot" />
-              <span className="text-sm text-gray-500">
-                Available for freelance
-              </span>
+              <span className="text-sm text-gray-500">{t.hero.status}</span>
             </div>
 
             <h1 className="font-head font-extrabold leading-[0.92] tracking-tight text-[clamp(3rem,8vw,6rem)] mb-4 reveal">
@@ -28,8 +30,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg text-gray-500 max-w-md mb-8 reveal">
-              Fullstack Developer · 3 years building products at French startups
-              · Now freelancing.
+              {t.hero.bio}
             </p>
 
             <div className="flex flex-wrap gap-2 mb-8 reveal">
@@ -49,10 +50,10 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-3 reveal">
               <a href="#contact" className="btn-primary">
-                Hire me →
+                {t.hero.cta}
               </a>
               <a href="#projects" className="btn-ghost">
-                See my work
+                {t.hero.secondary}
               </a>
             </div>
 
@@ -60,7 +61,7 @@ export default function Hero() {
               <span className="w-7 h-7 border border-gray-200 rounded-full flex items-center justify-center bounce-arrow">
                 ↓
               </span>
-              Scroll to explore
+              {t.hero.scroll}
             </div>
           </div>
 

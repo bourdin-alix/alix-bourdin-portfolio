@@ -63,6 +63,10 @@
 
 ### 7. Multi-langue FR / EN
 
-- [ ] Système i18n léger (JSON de traductions + contexte React, pas de lib externe)
-- [ ] Toggle FR/EN dans la Nav
-- [ ] Traduire toutes les sections
+- [x] Infrastructure : `LanguageContext` + `useT()` + JSONs EN/FR
+- [x] Toggle 🇫🇷/🇬🇧 dans la Nav
+- [x] Nav, Hero, About, Education, Experience, Skills
+- [x] Projects — strings statiques + descriptions dans JSON (`projects.descriptions.slug`)
+- [x] Hobbies — strings statiques + noms/descriptions dans JSON (`hobbies.items.slug`)
+- [x] Quiz — strings statiques + questions/options/feedbacks/résultats dans JSON
+- [x] Contact — strings statiques uniquement

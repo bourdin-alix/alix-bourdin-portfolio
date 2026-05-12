@@ -1,9 +1,11 @@
 import { QUESTIONS } from "../../data/quiz";
+import { useT } from "../../hooks/useT";
 import { useQuiz } from "./useQuiz";
 import QuizQuestion from "./QuizQuestion";
 import QuizResults from "./QuizResults";
 
 export default function Quiz() {
+  const t = useT();
   const {
     question,
     selectedIdx,
@@ -21,14 +23,13 @@ export default function Quiz() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-8">
           <span className="text-xs font-head font-semibold tracking-widest uppercase text-accent-mid block mb-3">
-            The Quiz
+            {t.quiz.sectionLabel}
           </span>
           <h2 className="font-head font-bold text-white text-[clamp(1.8rem,4vw,2.8rem)] leading-tight mb-3">
-            Can you beat Emilien?
+            {t.quiz.heading}
           </h2>
           <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent-mid/30 rounded-full px-4 py-1.5 text-sm text-accent-mid">
-            🏆 Emilien · Les 12 Coups de Midi · Score: 5/5 — literally
-            unbeatable
+            {t.quiz.reference}
           </div>
         </div>
 
@@ -42,7 +43,13 @@ export default function Quiz() {
                 />
               </div>
               <div className="flex justify-between text-xs text-white/30 mt-1.5">
-                <span>{question.label}</span>
+                <span>
+                  {
+                    t.quiz.questions[
+                      question.slug as keyof typeof t.quiz.questions
+                    ].label
+                  }
+                </span>
                 <span>
                   {question.id} / {QUESTIONS.length}
                 </span>
@@ -61,7 +68,7 @@ export default function Quiz() {
                   onClick={handleNext}
                   className="w-full py-3 bg-accent hover:bg-accent-dark text-white font-head font-bold rounded-lg transition-colors"
                 >
-                  {isLast ? "See your results 🏆" : "Next question →"}
+                  {isLast ? t.quiz.resultsBtn : t.quiz.nextBtn}
                 </button>
               </div>
             )}
