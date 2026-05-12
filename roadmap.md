@@ -63,6 +63,7 @@
 
 ### 7. Multi-langue FR / EN
 
-- [ ] Système i18n léger (JSON de traductions + contexte React, pas de lib externe)
-- [ ] Toggle FR/EN dans la Nav
-- [ ] Traduire toutes les sections
+- [x] Infrastructure : `LanguageContext` + `useT()` + `localize()` + JSONs EN/FR
+- [x] Toggle 🇫🇷/🇬🇧 dans la Nav
+- [ ] Brancher `useT()` sur chaque composant (strings hardcodées → `t.section.key`)
+- [ ] Remplir les champs `*Fr?` dans les data files (JOBS, PROJECTS, HOBBIES, QUESTIONS)

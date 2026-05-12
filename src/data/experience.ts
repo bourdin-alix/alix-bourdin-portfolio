@@ -3,6 +3,7 @@ export interface Job {
   role: string;
   period: string;
   desc: string;
+  descFr?: string;
   tags: string[];
 }
 

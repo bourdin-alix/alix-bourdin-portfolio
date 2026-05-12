@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "about": "À propos",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "quiz": "Quiz",
+    "contact": "Contact",
+    "cta": "Me contacter"
+  },
+  "hero": {
+    "status": "Disponible en freelance",
+    "bio": "Développeur Fullstack · 3 ans à construire des produits dans des startups françaises · Maintenant freelance.",
+    "cta": "M'embaucher →",
+    "secondary": "Voir mes projets",
+    "scroll": "Défiler pour explorer"
+  },
+  "about": {
+    "sectionLabel": "À propos",
+    "heading1": "\"Construire vite,",
+    "heading2": "livrer encore plus vite.\"",
+    "bio1": "Je suis développeur fullstack avec un Master 2 d'Epitech. J'ai passé 3 ans dans des startups françaises en croissance rapide — où j'ai appris à construire de bout en bout, posséder des fonctionnalités et livrer des choses qui comptent.",
+    "bio2": "Maintenant freelance, j'apporte cet état d'esprit startup — rapidité, ownership, pragmatisme — à chaque projet que je prends.",
+    "statsYears": "Ans d'exp",
+    "statsStartups": "Startups",
+    "statsProjects": "Projets",
+    "quote": "Donnez-moi un problème clair et j'aurai une solution fonctionnelle avant la fin du standup.",
+    "easterEggWords": [
+      "Je ",
+      "bois ",
+      "au ",
+      "moins ",
+      "deux ",
+      "cafés ",
+      "le ",
+      "matin ",
+      "pour ",
+      "me ",
+      "réveiller."
+    ],
+    "easterEggHidden": "Je déteste le café !!!"
+  },
+  "education": {
+    "sectionLabel": "Formation",
+    "heading1": "Parcours",
+    "heading2": "académique"
+  },
+  "experience": {
+    "sectionLabel": "Expérience",
+    "heading1": "3 ans,",
+    "heading2": "3 startups"
+  },
+  "skills": {
+    "sectionLabel": "Compétences",
+    "heading": "Avec quoi je travaille",
+    "frontend": "Frontend & DB",
+    "backend": "Backend & Outils",
+    "bonus": "🤖 Compétence bonus : Claude-Driven Development — parce que pourquoi résoudre les problèmes seul quand on a l'IA comme co-pilote ? (Claude prend maintenant tout le crédit de toute façon 😄)"
+  },
+  "projects": {
+    "sectionLabel": "Projets",
+    "heading": "Ce que j'ai construit",
+    "statusLive": "En ligne",
+    "statusDev": "En développement",
+    "viewLive": "Voir en ligne →"
+  },
+  "hobbies": {
+    "sectionLabel": "En dehors du code",
+    "heading": "Au-delà de l'éditeur"
+  },
+  "quiz": {
+    "sectionLabel": "Le Quiz",
+    "heading": "Peux-tu battre Emilien ?",
+    "reference": "🏆 Emilien · Les 12 Coups de Midi · Score : 5/5 — littéralement imbattable",
+    "nextBtn": "Question suivante →",
+    "resultsBtn": "Voir tes résultats 🏆"
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "heading1": "Construisons",
+    "heading2": "quelque chose",
+    "heading3": "ensemble.",
+    "sub": "Ouvert aux missions freelance, collaborations et projets intéressants. Envoyez-moi un message.",
+    "footer": "© 2025 Alix Bourdin",
+    "footerSub": "Développeur Fullstack · Paris, France"
+  }
+}

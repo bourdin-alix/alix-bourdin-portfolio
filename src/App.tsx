@@ -10,12 +10,13 @@ import Hobbies from "./components/Hobbies";
 import Quiz from "./components/Quiz";
 import Contact from "./components/Contact";
 import { useScrollReveal } from "./hooks/useScrollReveal";
+import { LanguageProvider } from "./context/LanguageContext";
 
 export default function App(): JSX.Element {
   useScrollReveal();
 
   return (
-    <>
+    <LanguageProvider>
       <Nav />
       <main>
         <Hero />
@@ -28,6 +29,6 @@ export default function App(): JSX.Element {
         <Quiz />
         <Contact />
       </main>
-    </>
+    </LanguageProvider>
   );
 }

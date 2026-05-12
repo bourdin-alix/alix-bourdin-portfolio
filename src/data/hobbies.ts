@@ -1,7 +1,9 @@
 export interface Hobby {
   icon: string;
   name: string;
+  nameFr?: string;
   desc: string;
+  descFr?: string;
 }
 
 export const HOBBIES: Hobby[] = [

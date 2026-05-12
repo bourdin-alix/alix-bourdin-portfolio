@@ -1,6 +1,7 @@
 export interface Project {
   name: string;
   desc: string;
+  descFr?: string;
   status: "live" | "dev";
   tags: string[];
   link?: string;

@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "quiz": "Quiz",
+    "contact": "Contact",
+    "cta": "Let's talk"
+  },
+  "hero": {
+    "status": "Available for freelance",
+    "bio": "Fullstack Developer · 3 years building products at French startups · Now freelancing.",
+    "cta": "Hire me →",
+    "secondary": "See my work",
+    "scroll": "Scroll to explore"
+  },
+  "about": {
+    "sectionLabel": "About",
+    "heading1": "\"Building fast,",
+    "heading2": "shipping faster.\"",
+    "bio1": "I'm a fullstack developer with a Master 2 from Epitech. I spent 3 years at fast-moving French startups — where I learned to build end-to-end, own features, and ship things that matter.",
+    "bio2": "Now freelancing, I bring that startup mindset — speed, ownership, pragmatism — to every project I take on.",
+    "statsYears": "Years exp",
+    "statsStartups": "Startups",
+    "statsProjects": "Projects",
+    "quote": "Give me a clear problem and I'll have a working solution before the standup ends.",
+    "easterEggWords": [
+      "I ",
+      "drink ",
+      "at ",
+      "least ",
+      "two ",
+      "coffees ",
+      "in ",
+      "the ",
+      "morning ",
+      "to ",
+      "wake ",
+      "up."
+    ],
+    "easterEggHidden": "I actually hate coffee !!!"
+  },
+  "education": {
+    "sectionLabel": "Education",
+    "heading1": "Academic",
+    "heading2": "Background"
+  },
+  "experience": {
+    "sectionLabel": "Experience",
+    "heading1": "3 Years,",
+    "heading2": "3 Startups"
+  },
+  "skills": {
+    "sectionLabel": "Skills",
+    "heading": "What I Work With",
+    "frontend": "Frontend & DB",
+    "backend": "Backend & Tools",
+    "bonus": "🤖 Bonus skill: Claude-Driven Development — because why solve problems alone when you have AI as a co-pilot? (Claude now takes all the credit anyway 😄)"
+  },
+  "projects": {
+    "sectionLabel": "Projects",
+    "heading": "Things I've Built",
+    "statusLive": "Live",
+    "statusDev": "In development",
+    "viewLive": "View live →"
+  },
+  "hobbies": {
+    "sectionLabel": "Outside the code",
+    "heading": "Beyond the Editor"
+  },
+  "quiz": {
+    "sectionLabel": "The Quiz",
+    "heading": "Can you beat Emilien?",
+    "reference": "🏆 Emilien · Les 12 Coups de Midi · Score: 5/5 — literally unbeatable",
+    "nextBtn": "Next question →",
+    "resultsBtn": "See your results 🏆"
+  },
+  "contact": {
+    "sectionLabel": "Contact",
+    "heading1": "Let's build",
+    "heading2": "something",
+    "heading3": "together.",
+    "sub": "Open to freelance missions, collaborations, and interesting projects. Drop me a line.",
+    "footer": "© 2025 Alix Bourdin",
+    "footerSub": "Fullstack Developer · Paris, France"
+  }
+}

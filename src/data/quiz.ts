@@ -1,13 +1,17 @@
 export interface AnswerFeedback {
   message: string;
+  messageFr?: string;
   meme?: string; // future: image path
 }
 
 export interface Question {
   id: number;
   label: string;
+  labelFr?: string;
   question: string;
+  questionFr?: string;
   options: string[];
+  optionsFr?: string[];
   correct: number;
   feedback: AnswerFeedback[];
 }
@@ -15,7 +19,9 @@ export interface Question {
 export interface QuizResult {
   emoji: string;
   title: string;
+  titleFr?: string;
   msg: string;
+  msgFr?: string;
   meme?: string;
 }
 
