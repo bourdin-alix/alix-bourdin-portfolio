@@ -39,9 +39,10 @@
 
 ### 6. Rendre le site moins "IA"
 
-- [ ] Réécrire textes About, Experience, Projects — ton authentique + dry humor
-- [ ] Supprimer ou retravailler le bloc "Claude-Driven Development" (Skills.jsx)
-- [ ] Hero tagline + About pitch : écrire comme Alix parle
+- [x] Réécrire textes About, Experience, Projects — ton authentique + dry humor
+- [x] Supprimer ou retravailler le bloc "Claude-Driven Development" (Skills.jsx)
+- [x] Hero tagline + About pitch : écrire comme Alix parle
+- [ ] Retravailler les descriptions Hobbies
 
 ---
 
