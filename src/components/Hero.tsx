@@ -29,8 +29,13 @@ export default function Hero() {
               <span className="text-accent">Bourdin</span>
             </h1>
 
-            <p className="text-lg text-gray-500 max-w-md mb-8 reveal">
-              {t.hero.bio}
+            <p className="max-w-md mb-8 reveal">
+              <span className="block text-xl font-bold text-gray-800 mb-2">
+                {t.hero.bioHookLine1}
+                <br />
+                {t.hero.bioHookLine2}
+              </span>
+              <span className="text-lg text-gray-500">{t.hero.bioRest}</span>
             </p>
 
             <div className="flex flex-wrap gap-2 mb-8 reveal">

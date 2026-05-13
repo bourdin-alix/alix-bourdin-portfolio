@@ -21,6 +21,13 @@ export const LINKS: ContactLink[] = [
     external: true,
   },
   {
+    icon: "M",
+    label: "Malt",
+    sub: "malt.fr/profile/alixbourdin",
+    href: "https://www.malt.fr/profile/alixbourdin",
+    external: true,
+  },
+  {
     icon: "⌥",
     label: "GitHub",
     sub: "github.com/bourdin-alix",

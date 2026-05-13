@@ -9,7 +9,9 @@
   },
   "hero": {
     "status": "Disponible et ouvert aux opportunités",
-    "bio": "Je développe des apps web de A à Z. 3 ans en startup française, puis freelance. Ce que j'aime, c'est m'impliquer dès la conception ou reprendre un projet existant pour le faire grandir.",
+    "bioHookLine1": "Je développe des apps web, mobile",
+    "bioHookLine2": "et logiciel — de A à Z.",
+    "bioRest": "3 ans en startup française, puis freelance. Ce que j'aime, c'est m'impliquer dès la conception ou reprendre un projet existant pour le faire grandir.",
     "cta": "Me contacter →",
     "secondary": "Voir mes projets",
     "scroll": "Défiler pour explorer"

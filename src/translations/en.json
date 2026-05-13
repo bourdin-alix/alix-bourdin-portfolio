@@ -9,7 +9,9 @@
   },
   "hero": {
     "status": "Open to new opportunities",
-    "bio": "I build web apps, end to end. 3 years at French startups, then freelance. I like getting involved from day one — or picking up an existing project and helping it grow.",
+    "bioHookLine1": "I build web, mobile",
+    "bioHookLine2": "and software apps — end to end.",
+    "bioRest": "3 years at French startups, then freelance. I like getting involved from day one — or picking up an existing project and helping it grow.",
     "cta": "Contact me →",
     "secondary": "See my work",
     "scroll": "Scroll to explore"
