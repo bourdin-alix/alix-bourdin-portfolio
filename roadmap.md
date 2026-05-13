@@ -9,7 +9,8 @@
 - [x] Photo Hero (remplacer placeholder)
 - [x] Screenshots / visuels projets — vidéos MP4 pour les 3 projets (Stan Delivery, Wingstop, Risk Management)
 - [x] Descriptions Stan Delivery + Risk Management SaaS à enrichir
-- [ ] Ajouter le lien vers la page wingstop
+- [x] Ajouter le lien vers la page wingstop
+- [x] Ajouter le lien vers Malt
 
 ### 2. Bug Quiz — bouton "Next" mort
 
@@ -43,7 +44,7 @@
 - [x] Réécrire textes About, Experience, Projects — ton authentique + dry humor
 - [x] Supprimer ou retravailler le bloc "Claude-Driven Development" (Skills.jsx)
 - [x] Hero tagline + About pitch : écrire comme Alix parle
-- [ ] Retravailler les descriptions Hobbies
+- [x] Retravailler les descriptions Hobbies
 
 ---
 
@@ -51,10 +52,10 @@
 
 ### 9. Layout desktop — éléments trop compacts
 
-- [ ] Augmenter padding/margin des sections principales sur grand écran (1280px+)
-- [ ] Sections Hero, About, Experience, Projects : plus d'espace vertical entre les blocs
-- [ ] Utiliser mieux la largeur disponible (colonnes plus larges, max-width plus généreux)
-- [ ] Objectif : respirer, pas compresser — le style éditorial doit se déployer sur desktop
+- [x] Augmenter padding/margin des sections principales sur grand écran (1280px+)
+- [x] Sections Hero, About, Experience, Projects : plus d'espace vertical entre les blocs
+- [x] Utiliser mieux la largeur disponible (colonnes plus larges, max-width plus généreux)
+- [x] Objectif : respirer, pas compresser — le style éditorial doit se déployer sur desktop
 
 ### 8. Refactor useScrollReveal — supprimer querySelectorAll
 

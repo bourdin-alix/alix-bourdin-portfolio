@@ -29,7 +29,7 @@ export const PROJECTS: Project[] = [
     slug: "wingstop",
     status: "live",
     tags: ["React", "TypeScript"],
-    link: "#",
+    link: "https://wingstop-landing.pages.dev/?name=bastille",
     video: "/videos/project-wingstop.mp4",
   },
 ];
