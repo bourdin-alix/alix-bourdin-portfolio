@@ -60,18 +60,18 @@ export default function Projects() {
   const [featured, ...rest] = PROJECTS;
 
   return (
-    <section id="projects" className="py-24 border-t border-gray-100">
-      <div className="max-w-5xl mx-auto px-6">
+    <section id="projects" className="py-24 xl:py-36 border-t border-gray-100">
+      <div className="max-w-6xl mx-auto px-6">
         <span className="section-label reveal">{t.projects.sectionLabel}</span>
-        <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-10 reveal">
+        <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-10 xl:mb-16 reveal">
           {t.projects.heading}
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2 gap-5 xl:gap-7">
           {/* Featured */}
           <div className="md:col-span-2 bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-250 reveal">
             {featured.video && <VideoPreview src={featured.video} tall />}
-            <div className="p-5">
+            <div className="p-5 xl:p-8">
               <StatusBadge
                 status={featured.status}
                 labelLive={t.projects.statusLive}
@@ -118,7 +118,7 @@ export default function Projects() {
                   [ {name} ]
                 </div>
               )}
-              <div className="p-5">
+              <div className="p-5 xl:p-8">
                 <StatusBadge
                   status={status}
                   labelLive={t.projects.statusLive}

@@ -8,7 +8,7 @@ export default function Hero() {
       id="hero"
       className="pt-14 min-h-screen flex items-center overflow-hidden"
     >
-      <div className="max-w-5xl mx-auto px-6 w-full">
+      <div className="max-w-6xl mx-auto px-6 w-full">
         <div
           className="grid gap-10"
           style={{ gridTemplateColumns: "8px 1fr auto" }}
@@ -17,7 +17,7 @@ export default function Hero() {
           <div className="bg-accent rounded-sm" />
 
           {/* Content */}
-          <div className="py-12">
+          <div className="py-16 xl:py-24">
             <div className="flex items-center gap-3 mb-6 reveal">
               <span className="w-2 h-2 rounded-full bg-emerald-400 pulse-dot" />
               <span className="text-sm text-gray-500">{t.hero.status}</span>

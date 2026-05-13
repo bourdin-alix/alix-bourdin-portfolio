@@ -38,7 +38,9 @@
       "me ",
       "réveiller."
     ],
-    "easterEggHidden": "Je déteste le café !!!"
+    "easterEggHidden": "Je déteste le café !!!",
+    "quizTeaser": "Il y a un quiz en bas de cette page, et des indices sont cachés un peu partout pour t'aider à répondre. Emilien, le GOAT de question pour un champion, a eu 5/5. Est-ce que tu seras capable d'en faire autant ?",
+    "quizCta": "Tenter le quiz →"
   },
   "education": {
     "sectionLabel": "Formation",
