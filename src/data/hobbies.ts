@@ -7,5 +7,4 @@ export const HOBBIES: Hobby[] = [
   { icon: "⚽", slug: "football" },
   { icon: "✈️", slug: "travel" },
   { icon: "🎮", slug: "videoGames" },
-  { icon: "☕", slug: "coffee" },
 ];

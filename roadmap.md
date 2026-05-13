@@ -9,6 +9,7 @@
 - [x] Photo Hero (remplacer placeholder)
 - [x] Screenshots / visuels projets — vidéos MP4 pour les 3 projets (Stan Delivery, Wingstop, Risk Management)
 - [x] Descriptions Stan Delivery + Risk Management SaaS à enrichir
+- [ ] Ajouter le lien vers la page wingstop
 
 ### 2. Bug Quiz — bouton "Next" mort
 
