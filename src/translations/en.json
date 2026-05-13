@@ -39,7 +39,9 @@
       "wake ",
       "up."
     ],
-    "easterEggHidden": "I actually hate coffee !!!"
+    "easterEggHidden": "I actually hate coffee !!!",
+    "quizTeaser": "There's a quiz at the bottom of this page, and clues hidden throughout to help you answer. Emilien, the GOAT of question champions, scored 5/5. Think you can do the same?",
+    "quizCta": "Try the quiz →"
   },
   "education": {
     "sectionLabel": "Education",

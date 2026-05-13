@@ -5,18 +5,21 @@ export default function Experience() {
   const t = useT();
 
   return (
-    <section id="experience" className="py-24 border-t border-gray-100">
-      <div className="max-w-5xl mx-auto px-6">
+    <section
+      id="experience"
+      className="py-24 xl:py-36 border-t border-gray-100"
+    >
+      <div className="max-w-6xl mx-auto px-6">
         <span className="section-label reveal">
           {t.experience.sectionLabel}
         </span>
-        <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-10 reveal">
+        <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-10 xl:mb-16 reveal">
           {t.experience.heading1}
           <br />
           {t.experience.heading2}
         </h2>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 xl:gap-7">
           {JOBS.map(({ company, role, period, slug, tags }) => (
             <div
               key={company}
@@ -25,7 +28,7 @@ export default function Experience() {
               style={{ gridTemplateColumns: "6px 1fr" }}
             >
               <div className="bg-accent" />
-              <div className="p-5">
+              <div className="p-5 xl:p-8">
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <div>
                     <h3 className="font-head font-bold text-lg">{company}</h3>
