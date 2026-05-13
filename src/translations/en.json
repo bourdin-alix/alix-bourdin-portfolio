@@ -8,22 +8,23 @@
     "cta": "Let's talk"
   },
   "hero": {
-    "status": "Available for freelance",
-    "bio": "Fullstack Developer · 3 years building products at French startups · Now freelancing.",
-    "cta": "Hire me →",
+    "status": "Open to new opportunities",
+    "bio": "I build web apps, end to end. 3 years at French startups, then freelance. I like getting involved from day one — or picking up an existing project and helping it grow.",
+    "cta": "Contact me →",
     "secondary": "See my work",
     "scroll": "Scroll to explore"
   },
   "about": {
     "sectionLabel": "About",
-    "heading1": "\"Building fast,",
-    "heading2": "shipping faster.\"",
-    "bio1": "I'm a fullstack developer with a Master 2 from Epitech. I spent 3 years at fast-moving French startups — where I learned to build end-to-end, own features, and ship things that matter.",
-    "bio2": "Now freelancing, I bring that startup mindset — speed, ownership, pragmatism — to every project I take on.",
+    "heading1": "\"I listen, I build,",
+    "heading2": "I ship.\"",
+    "bio1": "Fullstack developer, Master 2 from Epitech. 3 years at French startups where I learned to build real products, end to end. Now freelancing, I bring the same rigor to every project — tailored approach, real attention to detail.",
+    "bio2": "",
     "statsYears": "Years exp",
     "statsStartups": "Startups",
     "statsProjects": "Projects",
-    "quote": "Give me a clear problem and I'll have a working solution before the standup ends.",
+    "routine": "Up early, gym, then code until something ships. Or breaks. Both happen.",
+    "quote": "A clear problem, a working solution. Fast.",
     "easterEggWords": [
       "I ",
       "drink ",
@@ -50,9 +51,9 @@
     "heading1": "3 Years,",
     "heading2": "3 Startups",
     "descriptions": {
-      "eteos": "Worked on the core platform end-to-end — from React frontends to backend APIs. Shipped features in a fast-moving environment.",
-      "upfund": "Built and maintained the crowdfunding platform. Worked on both the investor-facing UI and the backend infrastructure.",
-      "petiteMarelle": "First startup experience. Contributed to e-commerce features while finishing my Bachelor's — learned to ship under real product pressure."
+      "eteos": "I was involved in every phase, from conception to deployment. On the technical side, I integrated NFC for authentication and traceability, structured the frontend with reusable components, and laid solid foundations to keep the codebase maintainable over time.",
+      "upfund": "On this real estate SaaS, I touched everything. Data analytics with interactive D3.js visualizations, a map interface to compare properties, scrapers to keep market data up to date, and a back office so the team could manage their own data.",
+      "petiteMarelle": "On this toy rental platform, I worked on the user experience, the customer journey, and order management. I also built an admin interface to track key metrics, and worked on SEO and performance to improve conversion."
     }
   },
   "skills": {
@@ -60,7 +61,7 @@
     "heading": "What I Work With",
     "frontend": "Frontend & DB",
     "backend": "Backend & Tools",
-    "bonus": "🤖 Bonus skill: Claude-Driven Development — because why solve problems alone when you have AI as a co-pilot? (Claude now takes all the credit anyway 😄)"
+    "bonus": "🤖 Bonus skill: Claude as co-pilot. I brief, Claude builds, I fix. Sometimes in that order. He takes the blame when it crashes. He gets over it fast."
   },
   "projects": {
     "sectionLabel": "Projects",
@@ -182,7 +183,7 @@
     "heading1": "Let's build",
     "heading2": "something",
     "heading3": "together.",
-    "sub": "Open to freelance missions, collaborations, and interesting projects. Drop me a line.",
+    "sub": "Open to opportunities, whether freelance, full-time, or something I haven't imagined yet. Let's talk.",
     "footer": "© 2025 Alix Bourdin",
     "footerSub": "Fullstack Developer · Paris, France"
   }

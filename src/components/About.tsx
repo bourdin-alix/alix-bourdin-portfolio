@@ -185,7 +185,14 @@ export default function About() {
               <span className="text-accent">{t.about.heading2}</span>
             </h2>
             <p className="text-gray-500 leading-relaxed mb-4">{t.about.bio1}</p>
-            <p className="text-gray-500 leading-relaxed mb-4">{t.about.bio2}</p>
+            {t.about.bio2 && (
+              <p className="text-gray-500 leading-relaxed mb-4">
+                {t.about.bio2}
+              </p>
+            )}
+            <p className="text-gray-500 leading-relaxed mb-4">
+              {t.about.routine}
+            </p>
             {/* Easter egg sentence */}
             <p className="text-gray-500 leading-relaxed">
               <CafeEasterEgg

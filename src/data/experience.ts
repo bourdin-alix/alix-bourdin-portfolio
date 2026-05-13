@@ -21,13 +21,13 @@ export const JOBS: Job[] = [
     role: "Fullstack Developer",
     period: "2022 – 2023",
     slug: "upfund",
-    tags: ["React", "TypeScript", "Python", "FastAPI"],
+    tags: ["Angular", "TypeScript", "Python", "FastAPI"],
   },
   {
     company: "Petite Marelle",
     role: "Fullstack Developer",
     period: "2021 – 2022",
     slug: "petiteMarelle",
-    tags: ["React", "Node.js", "PostgreSQL"],
+    tags: ["TypeScript", "PHP", "PostgreSQL"],
   },
 ];

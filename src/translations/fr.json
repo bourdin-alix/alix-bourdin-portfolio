@@ -8,22 +8,23 @@
     "cta": "Me contacter"
   },
   "hero": {
-    "status": "Disponible en freelance",
-    "bio": "Développeur Fullstack · 3 ans à construire des produits dans des startups françaises · Maintenant freelance.",
-    "cta": "M'embaucher →",
+    "status": "Disponible et ouvert aux opportunités",
+    "bio": "Je développe des apps web de A à Z. 3 ans en startup française, puis freelance. Ce que j'aime, c'est m'impliquer dès la conception ou reprendre un projet existant pour le faire grandir.",
+    "cta": "Me contacter →",
     "secondary": "Voir mes projets",
     "scroll": "Défiler pour explorer"
   },
   "about": {
     "sectionLabel": "À propos",
-    "heading1": "\"Construire vite,",
-    "heading2": "livrer encore plus vite.\"",
-    "bio1": "Je suis développeur fullstack avec un Master 2 d'Epitech. J'ai passé 3 ans dans des startups françaises en croissance rapide — où j'ai appris à construire de bout en bout, posséder des fonctionnalités et livrer des choses qui comptent.",
-    "bio2": "Maintenant freelance, j'apporte cet état d'esprit startup — rapidité, ownership, pragmatisme — à chaque projet que je prends.",
+    "heading1": "\"J'écoute, je construis,",
+    "heading2": "je livre.\"",
+    "bio1": "Développeur fullstack, Master 2 Epitech. 3 ans en startup française où j'ai appris à construire de vrais produits, de bout en bout. Aujourd'hui freelance, j'apporte la même rigueur à chaque projet, avec une approche sur-mesure et un vrai souci du détail.",
+    "bio2": "",
     "statsYears": "Ans d'exp",
     "statsStartups": "Startups",
     "statsProjects": "Projets",
-    "quote": "Donnez-moi un problème clair et j'aurai une solution fonctionnelle avant la fin du standup.",
+    "routine": "Lever tôt, salle de sport, puis du code jusqu'à ce que quelque chose tourne. Ou casse. Les deux arrivent.",
+    "quote": "Un problème clair, une solution qui tourne. Rapidement.",
     "easterEggWords": [
       "Je ",
       "bois ",
@@ -49,9 +50,9 @@
     "heading1": "3 ans,",
     "heading2": "3 startups",
     "descriptions": {
-      "eteos": "Travaillé sur la plateforme principale de bout en bout — des frontends React aux APIs backend. Livraison de fonctionnalités dans un environnement en évolution rapide.",
-      "upfund": "Développé et maintenu la plateforme de crowdfunding. Travaillé aussi bien sur l'interface investisseur que sur l'infrastructure backend.",
-      "petiteMarelle": "Première expérience en startup. Contribué aux fonctionnalités e-commerce en terminant mon Bachelor — appris à livrer sous pression produit réelle."
+      "eteos": "J'ai participé à toutes les phases du projet, de la conception jusqu'au déploiement. Côté technique, j'ai intégré le NFC pour l'authentification et la traçabilité, structuré le frontend en composants réutilisables et posé des bases solides pour que le code reste maintenable dans le temps.",
+      "upfund": "Sur ce SaaS immobilier, j'ai touché à tout. De la data analytics avec des visualisations interactives en D3.js, à une interface cartographique pour comparer des biens, en passant par des scrapers pour garder les données marché à jour et un back-office pour que l'équipe garde la main sur les données.",
+      "petiteMarelle": "Sur cette plateforme de location de jouets, j'ai touché à l'expérience utilisateur, au parcours client et à la gestion des commandes. J'ai aussi construit une interface admin pour suivre les métriques clés et travaillé sur le SEO et les performances pour améliorer la conversion."
     }
   },
   "skills": {
@@ -59,7 +60,7 @@
     "heading": "Avec quoi je travaille",
     "frontend": "Frontend & DB",
     "backend": "Backend & Outils",
-    "bonus": "🤖 Compétence bonus : Claude-Driven Development — parce que pourquoi résoudre les problèmes seul quand on a l'IA comme co-pilote ? (Claude prend maintenant tout le crédit de toute façon 😄)"
+    "bonus": "🤖 Compétence bonus : Claude comme co-pilote. Je brief, Claude construit, je corrige. Parfois dans cet ordre. C'est lui qui prend la faute quand ça plante. Il s'en remet vite."
   },
   "projects": {
     "sectionLabel": "Projets",
@@ -184,7 +185,7 @@
     "heading1": "Construisons",
     "heading2": "quelque chose",
     "heading3": "ensemble.",
-    "sub": "Ouvert aux missions freelance, collaborations et projets intéressants. Envoyez-moi un message.",
+    "sub": "Ouvert aux opportunités, qu'elles soient freelance, en CDI ou autre chose que je n'ai pas encore imaginé. Écrivez-moi.",
     "footer": "© 2025 Alix Bourdin",
     "footerSub": "Développeur Fullstack · Paris, France"
   }
