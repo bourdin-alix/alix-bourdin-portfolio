@@ -80,13 +80,21 @@
     "sectionLabel": "En dehors du code",
     "heading": "Au-delà de l'éditeur",
     "items": {
-      "football": { "name": "Football", "desc": "Toujours sur le terrain" },
+      "football": {
+        "name": "Football",
+        "desc": "Toujours sur le terrain",
+        "detail": "Défenseur central, je tacle fort. Parfois le ballon."
+      },
       "travel": {
         "name": "Voyage",
-        "desc": "Toujours en train de planifier le prochain"
+        "desc": "Toujours en train de planifier le prochain",
+        "detail": "Le Japon est sur ma liste depuis trop longtemps, j'y serai un jour."
       },
-      "videoGames": { "name": "Jeux vidéo", "desc": "Compétiteur dans l'âme" },
-      "coffee": { "name": "Café", "desc": "Le vrai carburant" }
+      "videoGames": {
+        "name": "Jeux vidéo",
+        "desc": "Compétiteur dans l'âme",
+        "detail": "Call of Duty le soir, même si mes stats racontent une autre histoire."
+      }
     }
   },
   "quiz": {
@@ -188,7 +196,7 @@
     "heading2": "quelque chose",
     "heading3": "ensemble.",
     "sub": "Ouvert aux opportunités, qu'elles soient freelance, en CDI ou autre chose que je n'ai pas encore imaginé. Écrivez-moi.",
-    "footer": "© 2025 Alix Bourdin",
+    "footer": "© 2026 Alix Bourdin",
     "footerSub": "Développeur Fullstack · Paris, France"
   }
 }
