@@ -63,7 +63,7 @@
 - [x] **Phase 2** — Splitter `src/data/quiz.ts` → `quiz-questions.ts` + `quiz-results.ts`
 - [x] **Phase 3** — Extraire `CafeEasterEgg` de `About.tsx` → `src/components/CafeEasterEgg.tsx`
 - [x] **Phase 4** — Extraire `VideoPreview` + `StatusBadge` de `Projects.tsx` → fichiers séparés
-- [ ] **Phase 5** — Splitter `Nav.tsx` → `MobileMenu.tsx` + `LanguageSelector.tsx`
+- [x] **Phase 5** — Splitter `Nav.tsx` → `MobileMenu.tsx` + `LanguageSelector.tsx`
 - [ ] **Phase 6** — Refactor `useScrollReveal` : `querySelectorAll` → `ref` par composant
 
 ### 7. Multi-langue FR / EN
