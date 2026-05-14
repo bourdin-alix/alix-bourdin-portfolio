@@ -1,59 +1,7 @@
-import { useEffect, useRef } from "react";
-import { PROJECTS, Project } from "../data/projects";
+import { PROJECTS } from "../data/projects";
 import { useT } from "../hooks/useT";
-
-function VideoPreview({ src, tall = false }: { src: string; tall?: boolean }) {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play();
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.5 },
-    );
-
-    observer.observe(video);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div
-      className={`overflow-hidden border-b border-gray-100 bg-gray-50 ${
-        tall ? "h-96" : "h-72"
-      }`}
-    >
-      <video
-        ref={videoRef}
-        src={src}
-        className="w-full h-full object-cover object-top"
-        muted
-        playsInline
-      />
-    </div>
-  );
-}
-
-const StatusBadge = ({
-  status,
-  labelLive,
-  labelDev,
-}: Pick<Project, "status"> & { labelLive: string; labelDev: string }) =>
-  status === "live" ? (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700">
-      ● {labelLive}
-    </span>
-  ) : (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-yellow-50 text-yellow-700">
-      ⚙ {labelDev}
-    </span>
-  );
+import { VideoPreview } from "./VideoPreview";
+import { StatusBadge } from "./StatusBadge";
 
 export default function Projects() {
   const t = useT();
