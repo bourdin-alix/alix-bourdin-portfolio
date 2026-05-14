@@ -1,11 +1,19 @@
+import { useRef } from "react";
 import { useT } from "../hooks/useT";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import { CafeEasterEgg } from "./CafeEasterEgg";
 
 export default function About() {
   const t = useT();
+  const sectionRef = useRef<HTMLElement>(null);
+  useScrollReveal(sectionRef);
 
   return (
-    <section id="about" className="py-24 xl:py-36 border-t border-gray-100">
+    <section
+      ref={sectionRef}
+      id="about"
+      className="py-24 xl:py-36 border-t border-gray-100"
+    >
       <div className="max-w-6xl mx-auto px-6">
         <span className="section-label reveal">{t.about.sectionLabel}</span>
 

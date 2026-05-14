@@ -1,11 +1,19 @@
+import { useRef } from "react";
 import { EDU } from "../data/education";
 import { useT } from "../hooks/useT";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Education() {
   const t = useT();
+  const sectionRef = useRef<HTMLElement>(null);
+  useScrollReveal(sectionRef);
 
   return (
-    <section id="education" className="py-24 border-t border-gray-100">
+    <section
+      ref={sectionRef}
+      id="education"
+      className="py-24 border-t border-gray-100"
+    >
       <div className="max-w-5xl mx-auto px-6">
         <span className="section-label reveal">{t.education.sectionLabel}</span>
         <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-12 reveal">

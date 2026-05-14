@@ -1,10 +1,15 @@
+import { useRef } from "react";
 import { useT } from "../hooks/useT";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Hero() {
   const t = useT();
+  const sectionRef = useRef<HTMLElement>(null);
+  useScrollReveal(sectionRef);
 
   return (
     <section
+      ref={sectionRef}
       id="hero"
       className="pt-14 min-h-screen flex items-center overflow-hidden"
     >

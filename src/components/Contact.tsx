@@ -1,12 +1,20 @@
+import { useRef } from "react";
 import { LINKS } from "../data/contact";
 import { useT } from "../hooks/useT";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Contact() {
   const t = useT();
+  const sectionRef = useRef<HTMLElement>(null);
+  useScrollReveal(sectionRef);
 
   return (
     <>
-      <section id="contact" className="py-24 bg-dark border-t border-white/5">
+      <section
+        ref={sectionRef}
+        id="contact"
+        className="py-24 bg-dark border-t border-white/5"
+      >
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="reveal">

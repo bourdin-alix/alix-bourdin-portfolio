@@ -1,14 +1,22 @@
+import { useRef } from "react";
 import { PROJECTS } from "../data/projects";
 import { useT } from "../hooks/useT";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import { VideoPreview } from "./VideoPreview";
 import { StatusBadge } from "./StatusBadge";
 
 export default function Projects() {
   const t = useT();
+  const sectionRef = useRef<HTMLElement>(null);
+  useScrollReveal(sectionRef);
   const [featured, ...rest] = PROJECTS;
 
   return (
-    <section id="projects" className="py-24 xl:py-36 border-t border-gray-100">
+    <section
+      ref={sectionRef}
+      id="projects"
+      className="py-24 xl:py-36 border-t border-gray-100"
+    >
       <div className="max-w-6xl mx-auto px-6">
         <span className="section-label reveal">{t.projects.sectionLabel}</span>
         <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-10 xl:mb-16 reveal">
