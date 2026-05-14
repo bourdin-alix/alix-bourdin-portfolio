@@ -57,12 +57,14 @@
 - [x] Utiliser mieux la largeur disponible (colonnes plus larges, max-width plus généreux)
 - [x] Objectif : respirer, pas compresser — le style éditorial doit se déployer sur desktop
 
-### 8. Refactor useScrollReveal — supprimer querySelectorAll
+### 8. Refacto clean architecture
 
-- [ ] Remplacer `querySelectorAll(".reveal")` par des `useRef` par composant
-- [ ] Le hook `useScrollReveal` reçoit une `ref` en paramètre au lieu de scanner le DOM global
-- [ ] Chaque composant appelle `useScrollReveal(ref)` localement
-- [ ] Raison : `querySelectorAll` est un anti-pattern React (bypass du virtual DOM) — fonctionne sur un site statique, mais fragile si des composants se montent/démontent dynamiquement
+- [x] **Phase 1** — Supprimer `src/translations/utils.ts` (dead code — `localize()` inutilisée)
+- [ ] **Phase 2** — Splitter `src/data/quiz.ts` → `quiz-questions.ts` + `quiz-results.ts`
+- [ ] **Phase 3** — Extraire `CafeEasterEgg` de `About.tsx` → `src/components/CafeEasterEgg.tsx`
+- [ ] **Phase 4** — Extraire `VideoPreview` + `StatusBadge` de `Projects.tsx` → fichiers séparés
+- [ ] **Phase 5** — Splitter `Nav.tsx` → `MobileMenu.tsx` + `LanguageSelector.tsx`
+- [ ] **Phase 6** — Refactor `useScrollReveal` : `querySelectorAll` → `ref` par composant
 
 ### 7. Multi-langue FR / EN
 
