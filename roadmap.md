@@ -60,7 +60,7 @@
 ### 8. Refacto clean architecture
 
 - [x] **Phase 1** — Supprimer `src/translations/utils.ts` (dead code — `localize()` inutilisée)
-- [ ] **Phase 2** — Splitter `src/data/quiz.ts` → `quiz-questions.ts` + `quiz-results.ts`
+- [x] **Phase 2** — Splitter `src/data/quiz.ts` → `quiz-questions.ts` + `quiz-results.ts`
 - [ ] **Phase 3** — Extraire `CafeEasterEgg` de `About.tsx` → `src/components/CafeEasterEgg.tsx`
 - [ ] **Phase 4** — Extraire `VideoPreview` + `StatusBadge` de `Projects.tsx` → fichiers séparés
 - [ ] **Phase 5** — Splitter `Nav.tsx` → `MobileMenu.tsx` + `LanguageSelector.tsx`

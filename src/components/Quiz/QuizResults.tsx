@@ -1,4 +1,4 @@
-import { QuizResult } from "../../data/quiz";
+import { QuizResult } from "../../data/quiz-results";
 import { useT } from "../../hooks/useT";
 
 interface Props {
