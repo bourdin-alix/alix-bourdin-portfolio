@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { QUESTIONS, RESULTS } from "../../data/quiz";
+import { QUESTIONS } from "../../data/quiz-questions";
+import { RESULTS } from "../../data/quiz-results";
 
 export function useQuiz() {
   const [current, setCurrent] = useState(0);

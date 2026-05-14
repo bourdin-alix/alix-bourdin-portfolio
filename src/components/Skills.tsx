@@ -1,5 +1,7 @@
+import { useRef } from "react";
 import { FRONTEND, BACKEND, Skill } from "../data/skills";
 import { useT } from "../hooks/useT";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 function SkillBar({ name, w, favorite }: Skill) {
   return (
@@ -20,9 +22,15 @@ function SkillBar({ name, w, favorite }: Skill) {
 
 export default function Skills() {
   const t = useT();
+  const sectionRef = useRef<HTMLElement>(null);
+  useScrollReveal(sectionRef);
 
   return (
-    <section id="skills" className="py-24 border-t border-gray-100">
+    <section
+      ref={sectionRef}
+      id="skills"
+      className="py-24 border-t border-gray-100"
+    >
       <div className="max-w-5xl mx-auto px-6">
         <span className="section-label reveal">{t.skills.sectionLabel}</span>
         <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-head font-bold leading-tight tracking-tight mb-10 reveal">

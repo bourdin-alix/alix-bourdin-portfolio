@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { useLang } from "../context/LanguageContext";
 import { useT } from "../hooks/useT";
-import type { Language } from "../context/LanguageContext";
+import { LanguageSelector } from "./LanguageSelector";
+import { MobileMenu } from "./MobileMenu";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const { lang, setLang } = useLang();
   const t = useT();
 
   const navItems = [
@@ -40,17 +39,7 @@ export default function Nav() {
         </ul>
 
         <div className="hidden md:flex items-center gap-3">
-          {/* Language selector */}
-          <select
-            value={lang}
-            onChange={(e) => setLang(e.target.value as Language)}
-            className="text-xs font-head font-semibold text-gray-500 hover:text-accent transition-colors bg-transparent border-none cursor-pointer outline-none"
-            aria-label="Select language"
-          >
-            <option value="fr">🇫🇷 FR</option>
-            <option value="en">🇬🇧 EN</option>
-          </select>
-
+          <LanguageSelector variant="compact" />
           <a href="#contact" className="btn-primary text-sm py-2 px-4">
             {t.nav.cta}
           </a>
@@ -68,35 +57,11 @@ export default function Nav() {
         </button>
       </div>
 
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden border-t border-gray-100 bg-bg px-6 py-4 flex flex-col gap-3">
-          {[...navItems, { label: t.nav.contact, anchor: "contact" }].map(
-            ({ label, anchor }) => (
-              <a
-                key={anchor}
-                href={`#${anchor}`}
-                className="text-sm font-medium text-gray-600 hover:text-accent transition-colors no-underline"
-                onClick={() => setOpen(false)}
-              >
-                {label}
-              </a>
-            ),
-          )}
-          <select
-            value={lang}
-            onChange={(e) => {
-              setLang(e.target.value as Language);
-              setOpen(false);
-            }}
-            className="text-sm font-medium text-gray-500 bg-transparent border-none cursor-pointer outline-none"
-            aria-label="Select language"
-          >
-            <option value="fr">🇫🇷 Français</option>
-            <option value="en">🇬🇧 English</option>
-          </select>
-        </div>
-      )}
+      <MobileMenu
+        isOpen={open}
+        navItems={navItems}
+        onClose={() => setOpen(false)}
+      />
     </nav>
   );
 }

@@ -1,11 +1,16 @@
+import { useRef } from "react";
 import { JOBS } from "../data/experience";
 import { useT } from "../hooks/useT";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 
 export default function Experience() {
   const t = useT();
+  const sectionRef = useRef<HTMLElement>(null);
+  useScrollReveal(sectionRef);
 
   return (
     <section
+      ref={sectionRef}
       id="experience"
       className="py-24 xl:py-36 border-t border-gray-100"
     >

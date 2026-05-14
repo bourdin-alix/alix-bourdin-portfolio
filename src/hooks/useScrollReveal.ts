@@ -1,7 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, RefObject } from "react";
 
-export function useScrollReveal(): void {
+export function useScrollReveal(ref: RefObject<HTMLElement | null>): void {
   useEffect(() => {
+    const container = ref.current;
+    if (!container) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -17,14 +20,12 @@ export function useScrollReveal(): void {
       { threshold: 0.15 },
     );
 
-    // Stagger siblings within each section
-    document.querySelectorAll("section").forEach((sec) => {
-      sec.querySelectorAll(".reveal").forEach((el, i) => {
-        (el as HTMLElement).style.transitionDelay = `${i * 0.08}s`;
-      });
+    container.querySelectorAll(".reveal").forEach((el, i) => {
+      (el as HTMLElement).style.transitionDelay = `${i * 0.08}s`;
     });
 
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    container.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
     return () => observer.disconnect();
-  }, []);
+  }, [ref]);
 }

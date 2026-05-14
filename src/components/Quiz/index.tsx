@@ -1,4 +1,4 @@
-import { QUESTIONS } from "../../data/quiz";
+import { QUESTIONS } from "../../data/quiz-questions";
 import { useT } from "../../hooks/useT";
 import { useQuiz } from "./useQuiz";
 import QuizQuestion from "./QuizQuestion";
