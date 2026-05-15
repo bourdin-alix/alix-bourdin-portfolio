@@ -62,7 +62,7 @@ export default function Projects() {
           </div>
 
           {/* Grid cards */}
-          {rest.map(({ name, slug, status, tags, video }) => (
+          {rest.map(({ name, slug, status, tags, video, link }) => (
             <div
               key={name}
               className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-250 reveal"
@@ -90,13 +90,23 @@ export default function Projects() {
                     ]
                   }
                 </p>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 mb-3">
                   {tags.map((tag) => (
                     <span key={tag} className="tag">
                       {tag}
                     </span>
                   ))}
                 </div>
+                {link && (
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-head font-semibold text-accent hover:text-accent-dark transition-colors"
+                  >
+                    {t.projects.viewLive}
+                  </a>
+                )}
               </div>
             </div>
           ))}

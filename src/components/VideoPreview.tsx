@@ -3,9 +3,10 @@ import { useEffect, useRef } from "react";
 interface Props {
   src: string;
   tall?: boolean;
+  poster?: string;
 }
 
-export function VideoPreview({ src, tall = false }: Props) {
+export function VideoPreview({ src, tall = false, poster }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -15,7 +16,7 @@ export function VideoPreview({ src, tall = false }: Props) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          video.play();
+          video.play().catch(() => {});
           observer.disconnect();
         }
       },
@@ -35,9 +36,12 @@ export function VideoPreview({ src, tall = false }: Props) {
       <video
         ref={videoRef}
         src={src}
+        poster={poster}
         className="w-full h-full object-cover object-top"
         muted
         playsInline
+        loop
+        preload="metadata"
       />
     </div>
   );
