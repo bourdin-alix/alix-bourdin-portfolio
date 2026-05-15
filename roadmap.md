@@ -50,12 +50,15 @@
 
 ## 🟡 Nice to have
 
-### 9. Layout desktop — éléments trop compacts
+### 7. Multi-langue FR / EN
 
-- [x] Augmenter padding/margin des sections principales sur grand écran (1280px+)
-- [x] Sections Hero, About, Experience, Projects : plus d'espace vertical entre les blocs
-- [x] Utiliser mieux la largeur disponible (colonnes plus larges, max-width plus généreux)
-- [x] Objectif : respirer, pas compresser — le style éditorial doit se déployer sur desktop
+- [x] Infrastructure : `LanguageContext` + `useT()` + JSONs EN/FR
+- [x] Toggle 🇫🇷/🇬🇧 dans la Nav
+- [x] Nav, Hero, About, Education, Experience, Skills
+- [x] Projects — strings statiques + descriptions dans JSON (`projects.descriptions.slug`)
+- [x] Hobbies — strings statiques + noms/descriptions dans JSON (`hobbies.items.slug`)
+- [x] Quiz — strings statiques + questions/options/feedbacks/résultats dans JSON
+- [x] Contact — strings statiques uniquement
 
 ### 8. Refacto clean architecture
 
@@ -66,12 +69,30 @@
 - [x] **Phase 5** — Splitter `Nav.tsx` → `MobileMenu.tsx` + `LanguageSelector.tsx`
 - [x] **Phase 6** — Refactor `useScrollReveal` : `querySelectorAll` → `ref` par composant
 
-### 7. Multi-langue FR / EN
+### 9. Layout desktop — éléments trop compacts
 
-- [x] Infrastructure : `LanguageContext` + `useT()` + JSONs EN/FR
-- [x] Toggle 🇫🇷/🇬🇧 dans la Nav
-- [x] Nav, Hero, About, Education, Experience, Skills
-- [x] Projects — strings statiques + descriptions dans JSON (`projects.descriptions.slug`)
-- [x] Hobbies — strings statiques + noms/descriptions dans JSON (`hobbies.items.slug`)
-- [x] Quiz — strings statiques + questions/options/feedbacks/résultats dans JSON
-- [x] Contact — strings statiques uniquement
+- [x] Augmenter padding/margin des sections principales sur grand écran (1280px+)
+- [x] Sections Hero, About, Experience, Projects : plus d'espace vertical entre les blocs
+- [x] Utiliser mieux la largeur disponible (colonnes plus larges, max-width plus généreux)
+- [x] Objectif : respirer, pas compresser — le style éditorial doit se déployer sur desktop
+
+### 🔴 Correction
+
+### 10. Fix mobile — vidéos MP4 invisibles
+
+- [ ] Les vidéos MP4 ne s'affichent pas sur mobile — remplacer ou compléter avec une image de fallback poster
+- [ ] Tester autoplay muted playsinline sur iOS/Android
+
+### 11. Projets — bouton "Voir le projet" si dispo en ligne
+
+- [ ] Ajouter un lien/bouton dans la card projet si `url` est renseignée
+- [ ] Ajouter le champ `url` dans `src/data/projects.ts` pour les projets en prod (ex: Wingstop)
+
+### 12. Mobile — Hobbies card : reveal au click au lieu du hover
+
+- [ ] Sur mobile, `.group:hover` ne fonctionne pas — passer à un état toggle `onClick`
+- [ ] Desktop garde le hover, mobile passe au click
+
+### 13. Skills — retravailler les barres de compétences
+
+- [ ] Diminuer ou augmenter certaines barres pour plus de réalisme
