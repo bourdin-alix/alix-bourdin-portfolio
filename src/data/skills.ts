@@ -14,6 +14,6 @@ export const FRONTEND: Skill[] = [
 export const BACKEND: Skill[] = [
   { name: "Node.js", w: 85 },
   { name: "Python", w: 80, favorite: true },
-  { name: "FastAPI", w: 75 },
-  { name: "Git / Docker", w: 82 },
+  { name: "FastAPI", w: 60 },
+  { name: "Git / Docker", w: 70 },
 ];

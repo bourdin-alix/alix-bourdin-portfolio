@@ -67,7 +67,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="mt-12 flex items-center gap-3 text-gray-400 text-sm reveal">
+            <div className="mt-12 flex items-center gap-3 text-gray-500 text-sm reveal">
               <span className="w-7 h-7 border border-gray-200 rounded-full flex items-center justify-center bounce-arrow">
                 ↓
               </span>

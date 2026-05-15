@@ -32,7 +32,7 @@ export default function Hobbies() {
                 <div className="text-4xl mb-2">{icon}</div>
                 <div className="font-head font-bold text-base">{item.name}</div>
                 <div className="relative mt-1 text-xs min-h-[2.5rem]">
-                  <span className="absolute inset-0 flex items-start justify-center text-gray-400 group-hover:opacity-0 transition-opacity duration-200">
+                  <span className="absolute inset-0 flex items-start justify-center text-gray-500 group-hover:opacity-0 transition-opacity duration-200">
                     {item.desc}
                   </span>
                   <span className="absolute inset-0 flex items-start justify-center text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-200">

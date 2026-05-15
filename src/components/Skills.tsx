@@ -39,7 +39,7 @@ export default function Skills() {
 
         <div className="grid md:grid-cols-2 gap-10">
           <div className="reveal">
-            <p className="text-xs font-head font-semibold uppercase tracking-widest text-gray-400 mb-4">
+            <p className="text-xs font-head font-semibold uppercase tracking-widest text-gray-500 mb-4">
               {t.skills.frontend}
             </p>
             {FRONTEND.map((s) => (
@@ -47,7 +47,7 @@ export default function Skills() {
             ))}
           </div>
           <div className="reveal">
-            <p className="text-xs font-head font-semibold uppercase tracking-widest text-gray-400 mb-4">
+            <p className="text-xs font-head font-semibold uppercase tracking-widest text-gray-500 mb-4">
               {t.skills.backend}
             </p>
             {BACKEND.map((s) => (
