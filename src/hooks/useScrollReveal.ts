@@ -20,11 +20,13 @@ export function useScrollReveal(ref: RefObject<HTMLElement | null>): void {
       { threshold: 0.15 },
     );
 
-    container.querySelectorAll(".reveal").forEach((el, i) => {
-      (el as HTMLElement).style.transitionDelay = `${i * 0.08}s`;
+    requestAnimationFrame(() => {
+      const reveals = Array.from(container.querySelectorAll(".reveal"));
+      reveals.forEach((el, i) => {
+        (el as HTMLElement).style.transitionDelay = `${i * 0.08}s`;
+      });
+      reveals.forEach((el) => observer.observe(el));
     });
-
-    container.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, [ref]);

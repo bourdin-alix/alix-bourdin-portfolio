@@ -90,9 +90,9 @@
 
 ### 12. Skills — retravailler les barres de compétences
 
-- [ ] Diminuer ou augmenter certaines barres pour plus de réalisme
+- [x] Diminuer ou augmenter certaines barres pour plus de réalisme
 
 ### 13. Improve Performance, SEO ...
 
-- [ ] Faire un test de perf, seo ...
+- [x] Faire un test de perf, seo, accessibility, best practices
 - [ ] Améliorer les points importants

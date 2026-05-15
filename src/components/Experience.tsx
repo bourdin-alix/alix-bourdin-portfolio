@@ -37,9 +37,9 @@ export default function Experience() {
                 <div className="flex items-start justify-between gap-4 mb-1">
                   <div>
                     <h3 className="font-head font-bold text-lg">{company}</h3>
-                    <p className="text-sm text-gray-400 font-medium">{role}</p>
+                    <p className="text-sm text-gray-500 font-medium">{role}</p>
                   </div>
-                  <span className="text-xs text-gray-400 font-mono whitespace-nowrap mt-0.5">
+                  <span className="text-xs text-gray-500 font-mono whitespace-nowrap mt-0.5">
                     {period}
                   </span>
                 </div>

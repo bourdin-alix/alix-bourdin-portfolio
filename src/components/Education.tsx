@@ -39,7 +39,7 @@ export default function Education() {
                 {year}
               </div>
               <div className="font-head font-bold text-base">{degree}</div>
-              <div className="text-sm text-gray-400">{school}</div>
+              <div className="text-sm text-gray-500">{school}</div>
             </div>
           ))}
         </div>
@@ -59,7 +59,7 @@ export default function Education() {
                   {year}
                 </div>
                 <div className="font-head font-bold">{degree}</div>
-                <div className="text-sm text-gray-400">{school}</div>
+                <div className="text-sm text-gray-500">{school}</div>
               </div>
             </div>
           ))}
