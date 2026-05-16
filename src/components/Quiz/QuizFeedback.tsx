@@ -29,7 +29,7 @@ export default function QuizFeedback({ question, selectedIdx }: Props) {
         <img
           src={feedback.meme}
           alt="meme"
-          className="w-40 h-40 object-cover rounded-lg flex-shrink-0"
+          className="w-20 h-20 md:w-40 md:h-40 object-cover rounded-lg flex-shrink-0"
         />
       )}
     </div>
