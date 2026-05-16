@@ -95,4 +95,8 @@
 ### 13. Improve Performance, SEO ...
 
 - [x] Faire un test de perf, seo, accessibility, best practices
-- [ ] Améliorer les points importants
+- [x] Améliorer les points importants
+
+### 14. Fix mobile — mèmes quiz trop grands
+
+- [x] Réduire la taille des mèmes dans QuizFeedback sur mobile (`w-20 h-20` mobile, `md:w-40 md:h-40` desktop)
